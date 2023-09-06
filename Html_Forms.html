@@ -1,0 +1,88 @@
+<!-- 
+    NOTES:-
+        1. 'Name' attribute of the <input> tag is(like in input:email) the name through which our backend will recognise the particular tag and store the value entered throught that tag.
+
+        2. 'action' Attribue of <form>: Whenever we Add a <form> tag in the html, it is going to ask for some actio for submitting that particular form in the backend for the future refrences. We will write it as 'backend.php' . All the data submitted in the form will be stroed automatically in the 'backend.php' after submitting it.
+
+        3.<div> tag: <div> is a block element. If We use two seperate <div> tags for different inputs, then all the inputs will come on different lines.
+
+        4. Radio & checkbox inputs: Radio Buttons are such buttons that allows us to select any one of the following options amongst all. For ex- While selecting genders, we can only select either male or female .Since the name of the 'name' atrribute of the radio input is the same, it means that it is stored in one name in the backend. So that leaves the possibility of only one option to be slected. And that's how the radio input works.
+                Whereas, the checkBox allows selecting the multiple options available.
+
+        5. TextArea and <select>: For textarea, just type 'textarea'.For select ,just type select. These are not one of the types of the input tags.
+
+        6. <label> : The tag for which the <label> tag is being used ,id in the <label> tag should be the same as the id in that tag. We wrote'Name' inside the label tag,w hich signifies that 'Name' is the label for a tag whose id="name".
+
+        7. Within the <select> tag ,there is <option> tag to selct one of the options.
+            We can also make an option selected by default.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <h2>HTML Forms</h2>
+    <form action="backend.php">
+        <label for="name"> Name </label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+
+        <div>
+            Role: <input type="text" name="myRole" id="">
+        </div>
+        <br>
+
+        <div>
+            Email: <input type="email" name="" id="">
+        </div>
+        <br>
+
+        <div>
+            phone No : <input type="number" name="phoneNo" id="">
+        </div>
+        <br>
+
+        <div>
+            Write About Yourself: <br> <textarea name="myText" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+
+        <label for="car">Car</label>
+        <div>
+            <select name="myCar" id="car">
+                <option value="ind" selected>Indica</option>
+                <option value="swf">Swift</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            Date Of Birth: <input type="date" name="TheDate" id="">
+        </div>
+        <br>
+
+        <div>
+            Gender: Male<input type="radio" name="myGender" >  Female<input type="radio" name="myGender" >  Others<input type="radio" name="myGender" >
+        </div>
+        <br>
+
+        <div>
+            Eligibility : Yes<input type="checkbox" name="MyEligibility" >  
+        </div>
+        <br>
+
+        <div>
+            <input type="reset" value="Reset Now">
+            <input type="submit" value="Submit Now">
+        </div>
+        <br>
+    </form>
+</body>
+</html>

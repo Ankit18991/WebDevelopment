@@ -1,0 +1,62 @@
+<!-- 
+    NOTES:-
+        1. Difference between tags and attributes:  Tags and Attributes: <a>(the anchor tag) is a tag, href is its Attribute. Meta is a Tag, but name, content are its attribute .Attribute Gives new features ot the Tags.
+        
+        2. Linking websites/ Adding Links: To Link a website to OUr HTMl page, we just type 'a' and use <a></a> tag and type or paste the link of the external website in the'href' attribute of the anchor tag :) 
+
+        3. Opening a Link in a New Tab: Suppose we Want Open the websites in a new tab ,not in the same tab as all of these four Links. We use 'target' attribute of the anchor tag(<a>). We type 'target="_blank" ' 
+                <a href="https://facebook.com" target="_blank">Go to FaceBook</a><br>
+                <a href="https://instagram.com" target="_blank">Go to InstaGram</a><br>
+                <a href="https://twitter.com" target="_blank">Go to Twitter</a><br>
+
+        4. Linking the Internal Files(links): We can also INsert the internal links.  Open the anchor tag .
+
+            Syntax: <a href="/internal_file_name" target="_blank">Display_text</a>
+            Example: <a href="/html_Tags_01.html" target="_blank">My HTML Tutorials</a>
+          
+        5. Linking Images:-
+            i. Linking Local Images: Copy The Path of the Image in Your PC, the type 'img' to get <img> in the workspace. The paste the path of the image in the src attribute and type the text in 'alt', the text that You want to Dispplay if the Image is not available Or It is Unable to eb Loaded
+
+            ii. For Better external Image sourse, go to 'sourceunspalsh.com'
+    NOTA: The image source that You copy from this website, is dynamic, if you reload Your Website, everytime a new image is Loaded on the screen  -->
+    <!-- We can't Resize the image Dimension of the random image directly form the source link copied from the web , but if it is copied from unspalsh.com, You can change the Dimentions of the img directly from the source link. 
+        
+    So , to resize any image Instead we use the 'width' and 'height' attribute of <img> tag and specify the width and height we want.
+    
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links and Images</title>
+</head>
+<body>
+    <!-- Linking websites: To Link a website to OUr HTMl page, we just type 'a' and use <a></a> tag and type or paste the link of the external website in the'href' attribute of the anchor tag :) -->
+    <a href="https://google.com">Go to GooGle</a><br>
+    
+    <!-- Opening a Link in a New Tab: Suppose we Want Open the websites in a new tab ,not in the same tab as all of these four Links. We use 'target' attribute of the anchor tag(<a>). We type 'target="_blank" ' -->
+    <a href="https://facebook.com" target="_blank">Go to FaceBook</a><br>
+    <a href="https://instagram.com" target="_blank">Go to InstaGram</a><br>
+    <a href="https://twitter.com" target="_blank">Go to Twitter</a><br>
+
+    <!-- Linking the Internal Files(links): We can also INsert the internal links.  -->
+    <a href="/html_Tags_01.html" target="_blank">My HTML Tutorials</a>
+
+    <!-- Linking Images:- -->
+    <!-- Linking Local Images: Copy The Path of the Image in Your PC, the type 'img' to get <img> in the workspace. The paste the path of the image in the src attribute and type the text in 'alt', the text that You want to Dispplay if the Image is not available Or It is Unable to eb Loaded-->
+    <img src="D:\My excel Lessons\OneDrive\Pictures\Camera Roll\WIN_20230213_13_05_38_Pro - Copy.jpg" alt="Error __ Loading Image">
+
+    <!-- For Better external Image sourse, go to 'sourceunspalsh.com'
+    NOTA: The image source that You copy from this website, is dynamic, if you reload Your Website, everytime a new image is Loaded on the screen  -->
+    <!-- We can't Resize the image Dimension of the random image directly form the source link copied from the web , but if it is copied from unspalsh.com, You can change the Dimentions of the img directly from the source link. 
+        
+    So , to resize any image Instead we use the 'width' and 'height' attribute of <img> tag and specify the width and height we want.  -->
+
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn1.gstatic.com%2Flicensed-image%3Fq%3Dtbn%3AANd9GcSyuHCGDUN6vGolF8KZPl-7PQN81qzk-bdCgukv8X8d-D45ii94Uxz3JfprlT9kW7bBO3qA2wt1wHyw-Eg&psig=AOvVaw0mHMjNtHj465OGitdvFUpb&ust=1693816843966000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJj1n6WFjoEDFQAAAAAdAAAAABAE" alt="Error __ Loading Image" width="233" height="234">
+
+</body>
+</html>

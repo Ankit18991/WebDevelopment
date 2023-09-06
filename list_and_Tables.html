@@ -1,0 +1,89 @@
+<!-- 
+    NOTES:-
+        1. Lists are the tags used to Store the list.
+        2. There are two Tyes of lists :-
+             i.> Unordered List
+             ii.> Ordered List
+
+        3. <ul> is used to list the unordered list.
+        
+        4. 'type' attribute: It is used to clarify the type of bullet.
+            i.> It is an attribute of both <ul> and <ol> tag (unordered list and ordered List).
+            
+            ii.> 'type' attribute of the ordered list<ol> = i, I, 1, a and 2 more.
+            
+            iii.> 'type' attribute of the unordered list<ul> = 'square, circle, disc(hollow circle)'
+        
+        5. <tr> tag is used to add the rows
+        
+        6. Inside the table tag <table> ,there is a tag name <thead> which defines the table head of the table. After adding the row of the table , we go the <tbody> (table Body). <tr> tag is used to justify that this part is of a row
+
+        7. The <td> tag in HTML defines a standard data cell in an HTML table.
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists and Tables</title>
+</head>
+<body>
+    
+        <ol type="I">
+            <li>Name: Utkarsh Kumar</li>
+            <li>
+                Course : BCA
+                <ul type="circle">
+                    <li>Sec: B</li>
+                    <li>Semester: 3rd</li>
+                    <li>Marks Obtained in the first semester: 453</li>
+                </ul>
+
+                
+            </li>
+            <li>Roll No: 225087</li>
+            <li>College: LNMCBM</li>
+            <li>Second Year</li>
+        </ol>
+
+        <!-- Tables -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Section</th>
+                </tr>
+            </thead>
+
+        <tbody>
+            <tr>
+                <td>Utkarsh Kumar</td>
+                <td>BCA</td>
+                <td>B</td>
+            </tr>
+
+            <tr>
+                <td>Suraj Kumar</td>
+                <td>BCA</td>
+                <td>A</td>
+            </tr>
+
+            <tr>
+                <td>Aryan Kumar</td>
+                <td>BCA</td>
+                <td>B</td>
+            </tr>
+
+            <tr>
+                <td>Gaurav Kumar</td>
+                <td>BBA</td>
+                <td>B</td>
+            </tr>
+        </tbody>
+        </table>
+    
+</body>
+</html>
