@@ -1,0 +1,49 @@
+<!-- 
+
+    NOTES:
+        1. ID: 'id' is identifier. Isko identify krlo iss naam se.  'id' is uinque for a tag. There can't be multiple tags with the same id. We can't give the same id to diffrent tags. 
+        3. ID: id is used as an identifier of an element or tag. So, when using css or js ids are important in identifying the element we want to modify.
+            For example:  <div id="mainBox" class="redBg"></div>
+        , then we can't have : <h3 id="mainBox">
+
+        4. USAGE OF CLASS: Suppose we have 100 element, and we want to give the same text color and border color to those element. One way to do it is to use ids to assign those properties to the elements, the smarter way is to create class and define the class property. And then assign the class to all the 100 elements. 
+
+        5. PROPERTIES OF CLASSES AND IDS: I.>An element or a tag can have only one id, and an id can belong to any one element, while an element can have multiple classes. For example, there is a class whee i have defined it to have the bg color red and there is a class where the border color has been defined as Black. So we can assign both the classes to the element.
+            For ex: <div id="mainBox" class="redBg blackBorder">
+
+        II.> Multiple elements can have the same class.
+
+        6. NOTA(VS code): i.> If We want span of class 'redBg', then  we type 'span.redBg'.
+        If we want a span of id="mainSpan", then we type 'span#mainSpan'
+                ('.' is for class and '#' is for ID)
+
+                          ii.> For multiple classes :-
+                          div.redBg.balckBorder.anotherclass (and Press enter)
+
+        7. Emmet takes div tag as bydefault.
+        8. Creating multiple elements using emmet:-
+                span.myClass.myClass2.myClass3*4 (for similar elements)
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and IDs</title>
+</head>
+<body>
+    <h3>IDS and Classes In HTML</h3>
+    <div id="mainBox" class="redBg blackBorder">
+        This is mainBox
+    </div>
+    <span class="redBg">I am span</span>
+    <span id="mainSpan"></span>
+
+    <div class="redBg blackBorder anotherClass">HA Ha , the power of emmet</div>
+    <span class="myclass myClass2 myClass3">First</span>
+    <span class="myclass myClass2 myClass3">Second</span>
+    <span class="myclass myClass2 myClass3">Third</span> 
+    <span class="myclass myClass2 myClass3">Fourth</span>
+</body>
+</html>
