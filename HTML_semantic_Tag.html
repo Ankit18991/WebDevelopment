@@ -1,0 +1,188 @@
+<!-- We cannot nest the navigation tag under any tag except the containers like header. It is the direct child of the body of the html document. It can also Directly be:-
+    <nav>
+        <a href="https://youtube.com" alt="Network Connect Issue">Youtube</a> |
+        <a href="https://google.com" alt="Network Connect Issue">Google</a> |
+        <a href="https://scaler.com" alt="Network Connect Issue">Scaler</a>
+    </nav>
+-->
+
+<!-- We can also Nest Header tag inside the <section> and <article> , but only if those section tags are not i=nested inside another header or footer tag. That would be scemantically Incorrect to do so. -->
+    <!-- 
+        We can use figure element withing section, article a,header or Footer(exceptionally). Within header to Insert logos.
+    -->
+    
+    <!-- section element is used to group related content together. -->
+    
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Semantic Tag</title>
+        </head>
+        <body>
+            <header>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBEUXNK4XPW04ZX3A5tQUxBibhC8Ab5fZTsinqznEoIThE2uxNCsWGw6J1i0Dth6xDYfg&usqp=CAU" alt="Logo Not Loading">
+                    
+                </figure>
+        <nav>
+            <a href="https://youtube.com" alt="Network Connect Issue">Youtube</a> |
+            <a href="https://google.com" alt="Network Connect Issue">Google</a> |
+            <a href="https://scaler.com" alt="Network Connect Issue">Scaler</a>
+        </nav>
+    </header>
+    <section>
+        <header>
+            <h2>
+                Domain Constraint
+            </h2>
+            <p>Constraints In DBMS</p>
+        </header>
+
+        <!-- No difference if there is no header here.
+            We can use the header tag as the introductory element of any article or section. -->
+
+        <h3>Types of Constraints</h3>
+        <figure>
+            <img src="https://www.boardinfinity.com/blog/content/images/2023/01/Integrity-Constraint.png" height="300" width="600" alt="Error Loading image">
+
+            <figcaption>Fig 1: Integrity Constraint in Relational Model</figcaption>
+        </figure>
+        <div>
+        <p>
+            There Are mainly Four Type of Constraints IN Relational Model:-
+            
+             <div>1. Domain Constraint</div>
+             <div>2. Tuple Uniqueness Constraint</div>
+             <div>3. Key Constraint</div>
+             <div>4. Entity Integrity Constraint</div>
+             <div>5. Self Referencial Constraint</div>
+        </p>
+    </div>
+    </section>
+
+    <section>
+        <h3> Expaination of All the Types :- </h3>
+        <article>
+            <header>
+                <h4>1. Domain Constraint</h4>
+            </header>
+            <div>
+                <p>
+                    Domain Constraint is a type of Constraint Which states that the Type of Values that can be Inserted in a particular attribute. Attributes can Only have specific values. For example:
+                </p>
+                    <p>
+                        1. Age cannot be <em><strong>less than 0.</strong></em>
+                    </p>
+                    <p>
+                        2. A telephone number <em><strong>can't have</strong></em> a Characters as one of the Digits of the number.
+                    </p>
+            </div>
+        </article>
+        <article>
+            <h4>2. Tuple Uniqueness Constraint</h4>
+            <div>
+                <p>
+                    It is a contraint in the Relational Model which states that two tuples in a relations can't be the same. It is Because tables are basically relations. And relations <em><strong>(in mathematics)</strong></em> are basicaly <em><strong>Sets(subsets of A X B)</strong></em>. And sets can't have duplicate values. For example , the value of all the attribute of two customers can't be the same in the customer table.
+                </p>
+            </div>
+        </article>
+        <article>
+            <h4>3. Key Constraint</h4>
+            <div>
+                <p>
+                    It is a contraints in the relation model of DBMS , which states that mimimum number of attributes in the table should <em><strong>UNIQUELY</strong></em> identify a tuple In the Table or relation. 
+                </p>
+            </div>
+        </article>
+        <article>
+            <h4>4. Entity Integrity Constraint</h4>
+            <div>
+            <p>
+                It is the Constraint on Primary Key in the table. According to <em><strong>Entity Integrity Constraint</strong></em>, the primary key
+                : 
+                
+                <em>
+                    <strong>
+                        <ol type="I">
+                    <li>Have to Be <em><strong>UNIQUE</strong></em></li>
+                    <li>Have to Be <em><strong>NOT NULL</strong></em></li>
+                    <li>Can Be use to <em><strong>Reference Other table</strong></em></li>
+                </ol>
+            </strong>
+        </em>
+
+            </p>
+            <aside>
+                <h5>Importance of Primary Key In <em><strong>RELATIONAL MODEL</strong></em></h5>
+            <p>
+                Primary key in a table is the most Important aspect to have a relational database where each table is connected to the other. It si basically used for the unique identification of each record. Even if there is no primary key for an entity ,we as a Databse developer ,it is our role to assign the primary key for that entity. We try to Avoid having <em><strong>Weak Enitities.</strong></em>
+            </p>
+                
+            </aside>
+        </div>
+        </article>
+        <article>
+            <h4>5. Self - Referencial Constraint</h4>
+            <div>
+            <p>
+                It is the Constraint on <em><strong>Foreign Key</strong></em>. According to this constraint, a <strong>Primary Key</strong> pf One table or relation can be used as foreign key in other table in order to have a <strong>relation</strong> between Tables. Following is true According to This constraint:-
+                <em>
+                    <strong>
+                        <ol type="I">
+                            <li>
+                                CASE 1: If We delete a record from the referenced table:-
+                            </li>
+                            <ol type="i">
+                                <li>
+                                    Do Nothing
+                                </li>
+                                <li> 
+                                    ON DELETE CASCADE
+                                </li>
+                                <li> 
+                                    ON DELETE SET NULL
+                                </li>
+                            </ol>
+                            <li>
+                                CASE 2: If we delete A record from the referencing table:-
+                            </li>
+                            <ol type="i">
+                                <li>
+                                    No effect On the referencial Integrity.
+                                </li>
+                            </ol>
+                            <li>
+                                CASE 3: If we insert or update a record in the referencing table:-
+                            </li>
+                            <ol type="i">
+                                <li>
+                                    ON INSERT CASCADE (while Inserting)
+                                </li>
+                                <li>
+                                    NO CHANGE(while updating)
+                                </li>
+                            </ol>
+                        </ol>
+                    </strong>
+                </em>
+
+            </p>
+        </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>Author: Utkarsh Kumar <em><strong>(This is the footer of the web Page)</strong></em></p>
+        <div>
+            <a href="utkarshkumararms@gmail.com">Email us</a>
+        </div>
+        <div>
+            Contact us: +91 97979 99983
+        </div>
+        <span>Copyright &copy;</span>
+        <span>&lt; See Ya In HTML &gt;</span>
+    </footer>
+</body>
+</html>
