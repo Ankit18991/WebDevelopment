@@ -1,0 +1,17 @@
+header{
+        color:brown;
+        background-color: aquamarine;
+        border-radius: 2px;
+}
+
+section{
+    color:brown;
+    background-color: blue;
+    border-radius: 2px;
+}
+
+p.myPara{
+    color:aquamarine;
+    background-color: green;
+    border-radius: 2px;
+}
