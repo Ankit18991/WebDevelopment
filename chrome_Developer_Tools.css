@@ -1,0 +1,15 @@
+.bgPrimary{
+    color: darkgreen;
+    border-radius: 2px;
+    font-style: italic;
+    border-color: aquamarine;
+    background-color: black;
+}
+
+.bgSecondary{
+    color: lightgreen;
+    background-color: black;
+    border-radius: 2px;
+    font-style: bold;
+    border-color: orange;
+}
