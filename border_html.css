@@ -1,0 +1,94 @@
+.colorPrimary{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-style:normal;
+    color: lightgreen;
+    border-color:aqua;
+    background-color: black;
+    border-style: solid;
+    height: 100px;
+    width: 455px;
+    border-radius: 4px;
+    border-left: 4px solid green;
+    border-right: 4px solid greenyellow;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 14px;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 6px;
+}
+
+.colorSecondary{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-style:normal;
+    color: lightgreen;
+    border-color:greenyellow;
+    background-color: black;
+    border-style:solid;
+    height: 100px;
+    width: 455px;
+    border-radius: 4px;
+    border-left: 4px solid green;
+    border-right: 4px solid greenyellow;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 14px;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 6px;
+}
+/* 
+    since the class colorSecondary is of the table, so the border of that table can't be Overwritten even if we try to d it, the properties of this class will be applied to the outer borers of the table.
+
+    So it is also Correct to define differnet CSS properties for the different rows in a table.
+*/
+
+.firstSem{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-style:normal;
+    color: lightgreen;
+    border-color:aqua;
+    background-color: black;
+    border-style: solid;
+    /* height: 100px;
+    width: 455px; */
+    border-radius: 4px;
+    background-image:url('photo_2023-08-29_17-30-59.jpg');
+    background-repeat: no-repeat;
+    border: 4px solid lightgreen;
+}
+
+.secondSem{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-style:normal;
+    color: aquamarine;
+    border-color:aqua;
+    background-color: black;
+    border-style: solid;
+    /* height: 100px;
+    width: 455px; */
+    border-radius: 4px;
+    background-image:url('photo_2023-08-29_17-30-59.jpg');
+    background-repeat: no-repeat;
+    border: 4px solid orange;
+}
+
+.thirdSem{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-style:normal;
+    color: skyblue;
+    border-color:rgb(235, 5, 131);
+    background-color: black;
+    border-style: solid;
+    /* height: 100px;
+    width: 455px; */
+    border-radius: 4px;
+    background-image:url('photo_2023-08-29_17-30-59.jpg');
+    background-repeat: no-repeat;
+    border: 4px solid lightcoral;
+}
+
+/* .extra{
+    border: 6px solid red;
+} ---> This was to check what happen with this statement :) */
