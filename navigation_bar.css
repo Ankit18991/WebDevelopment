@@ -1,0 +1,51 @@
+   /* .navBar ul{
+            background-color: rgb(33, 51, 51);
+            float:left;
+        } 
+
+         .navBar li{
+            background-color: rgb(33, 51, 51);
+            float:left;
+        }  */
+        /* In both these Cases we don't have to use  the overflow: auto property */
+
+        .navBar{
+            background-color: black;
+            border: 5px solid darkcyan;
+        }
+
+        .navBar li{
+            float: left;
+            margin: 13px 60px;
+            list-style: none; /* To remove Bullets */
+            /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+        }
+
+        .navBar li a{
+            color: lightgreen;
+            cursor: pointer;
+            text-decoration: none;  /* To remove Underline */
+        }
+
+        .navBar ul{
+            overflow: auto;
+        }
+        /* since it was supposed to be an unordered list and it is a list , but we floated it to the left(in a single line), the li tag is overflown by ul tag */
+
+        #search{
+            color: black;
+            background-color: white;
+            text-shadow: 2px;
+            font-family: cursive;
+            padding-left: 12px;
+            margin-left:200px;
+        }
+        
+        .navBar li a:hover{
+            color: rgb(4, 227, 252);
+        }
+
+        #search:hover{
+            cursor:pointer;
+            transform: translateY(67px);
+        }
