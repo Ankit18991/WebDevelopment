@@ -1,0 +1,137 @@
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    /* display: block; --> TO make the image / to apply margin auto on it */
+    display: block;
+    width: 75px;
+    float: left;
+    padding-left: 8px;
+    margin-left: 6px;
+
+}
+
+#table1{
+    width: 200px;
+    float:right;
+    padding-right: 8px;
+}
+
+#feature{
+    float:right;
+    margin-top:0px;
+    /* padding-bottom: 45px; */
+}
+
+.primary{
+    width: 350px;
+    color:white;
+    /* Before we use margin: auto we have use the width property(just commmon sense, the property is also applied without width :) ) */
+    margin: auto;
+    border: 3px solid sandybrown;  
+    padding-bottom: 200px; 
+    padding-top: 20px;
+    background-color: black;
+    padding-bottom: 559px;
+}
+
+.unique3{
+    margin-top: 0px;
+    /* display: block; */
+    margin-bottom: 0px;
+}
+
+#unique4{
+    margin-left: 10px;
+    font-weight: bolder;
+    padding-left: 2px;
+}
+
+div #unique2{
+    /* margin-top: 20px; */
+    margin-top: 10px;
+}
+
+.tertiary .unique3{
+    /* display: inline; --> No need to do that*/
+    margin-top: 0px;
+    clear: both;
+}
+
+.btn{
+    color: lightgreen;
+    background-color: rgb(70, 66, 66);
+    float: left;
+    margin-top: 19px;
+    margin-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-right: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: center;
+}
+
+.btn:hover{
+    color: rebeccapurple;
+    background-color: whitesmoke;
+}
+
+.btn:visited{
+    color: aqua;
+    background-color: black;
+}
+
+#whitecolor{
+    color: white;
+    background-color: rgb(70, 66, 66);
+    float: right;
+    margin-top: 19px;
+    margin-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    margin-right: 20px;
+    padding-right: 6px;
+    padding-right: 30px;
+    padding-left: 30px;
+    /* clear:left;  --> We don't use clear property in the floating element usually. When we set the clear property to the left, we are essentially telling element to move below any preceding floated element that are floated to the left. */
+    /* To stop the overflow of the elements */
+}
+
+#whitecolor:hover{
+    color: rebeccapurple;
+    background-color: whitesmoke;
+    transform: translateY(70px);
+}
+
+#whitecolor:visited{
+    color: lightseagreen;
+}
+
+#whitecolor:active{
+    color: lightseagreen;
+}
+
+footer img{
+    display: block;
+    width: 343px;
+    clear: both;
+    margin-left: 0px;
+}
+
+#unique{
+    width: 350px;
+    margin: auto;
+    padding-left: 60px;
+    display: block;
+    border: 6px solid lightgreen;
+    background-color: black;
+    color: greenyellow;
+}
+
+body{
+    background-color: rgb(21, 3, 35);
+}
