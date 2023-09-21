@@ -1,0 +1,53 @@
+#heado{
+    width: 148px;
+    color:lightgreen;
+    background-color: black;
+    border: 3px solid greenyellow;
+    margin: auto;
+    margin-top: 78px;
+    padding-left: 94px;
+    padding-right: 75px;
+}
+
+header h4{
+    margin-bottom: 0px;
+}
+
+.container{
+    border: 3px solid lightgreen;
+    width:200px;
+    margin:auto;
+    margin-top: 4px;
+    padding-left: 40px;
+    padding-right: 75px;
+    background-color: rgb(3, 22, 1);
+    color: white;
+    padding-bottom: 100px;
+    padding-top: 30px;
+}
+
+.inPut{
+    margin-bottom: 30px;
+}
+
+footer a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: lightgreen;
+    float:left;
+    font-weight: 100;
+}
+
+footer a:hover{
+    color: white;
+    background-color: rgb(43, 5, 59);
+}
+
+.inPut:hover{
+    color: bisque;
+    background-color: black;
+}
+
+body{
+    background-image: url('https://t4.ftcdn.net/jpg/04/60/71/01/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg');
+}
