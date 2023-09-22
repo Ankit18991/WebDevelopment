@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility And Z index</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo Bhai" rel="stylesheet">
+    <style>
+        #header1{
+            width: 400px;
+            background-color: black;
+            font-family: 'Baloo Bhai';
+            margin: 10px auto;
+            padding: 90px;
+            padding-bottom: 100px;
+            border: 4px solid rgb(38, 54, 54);
+            text-align: center;
+            color: lightgreen;
+            position: relative;
+            top: 130px;
+            right: 60px;
+            z-index: 2;
+        }
+
+        body{
+            background-color: rgb(37, 22, 22);
+        }
+
+        #theList{
+            display: inline-block;
+            background-color: rgb(17, 83, 47);
+            width: 390px;
+            font-family: 'Baloo Bhai';
+            margin: auto;
+            border: 4px solid lightgreen;
+            position:relative;
+            left: 1090px;       
+            top: 9px;    
+            z-index: 1;
+        }
+
+        .list1{
+            list-style: none;
+            width: 390px;
+            background-color: rgb(2, 40, 49);
+            font-family: 'Baloo Bhai';
+            text-align: right;
+            padding: 80px 90px;
+            border: 4px solid lightgreen;
+            margin: auto;
+            position: relative;
+            top: 4px;
+            left: 39px;
+            z-index: ;
+            /* z index is valid for the different containers. It won't work for the element in the same container and for the element with postion: absoolute , sticky , relatiuve or fixed as a property */
+        }
+
+        *{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header id="header1">
+        <h2>
+            List of My Friends
+        </h2>
+    </header>
+
+    <article id="theList">
+        <h3>
+            The list is below:-
+        </h3>
+    </article>
+
+    <article>
+        <ul >
+            <li class="list1">
+                Suraj
+            </li>
+
+            <li class="list1">
+                Gaurav
+            </li>
+
+            <li class="list1">
+                Gaurav
+            </li>
+
+            <li class="list1">
+                Ankit
+            </li>
+        </ul>
+    </article>
+</body>
+</html>
