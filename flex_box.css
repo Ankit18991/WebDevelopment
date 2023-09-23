@@ -1,0 +1,264 @@
+*{
+    /* font-family: 'Baloo Bhai'; */
+    box-sizing: border-box;
+}
+
+#heado{
+    margin: auto;
+    background-color: black;
+    border-radius: 8px;
+    /* font-family: 'Baloo Bhai'; */
+    text-align: center;
+    margin-bottom: 4px;
+    padding: 4px 4px;
+    color:lightgreen;
+}
+
+.main-container{
+    /* font-family: 'Baloo Bhai'; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* align-items: flex-end; */
+    align-items: stretch;
+    padding-bottom: 200px;
+}
+
+.main-container nav{
+    width: 100%;
+    text-align: center;
+}
+
+#navBar li{
+    display: inline-block;
+    list-style: none;
+}
+
+#navBar a{
+    /* font-family: 'Baloo Bhai'; */
+    text-decoration: none;
+    margin-right: 40px;
+    flex-basis: 10px;
+    color: white;
+    font-weight: bolder;
+    padding: 2px;
+}
+
+#navBar a:active{
+    color: aquamarine;
+    background-color: rgb(33, 41, 20);
+}
+
+#navBar a:visited{
+    columns: yellow;
+    background-color: rgb(38, 14, 14);
+}
+
+#navBar a:hover,#navBar button:hover{
+    cursor: pointer;
+    background-color: rgb(43, 18, 18);
+    color: aqua;
+}
+
+
+#navBar{
+    align-self: center;
+    background-color: rgb(89, 40, 4);
+}
+
+#logo1{
+    flex-grow: 10;
+    flex-shrink: 10;
+}
+
+#logo1:hover{
+    cursor: pointer;
+}
+
+#logo2{
+    width: 14%;
+    position: relative;
+    bottom: 20px;
+    left: 180px;
+}
+
+#logo2{
+    cursor: pointer;
+}
+
+.navT{
+    margin: 6px 6px;
+}
+
+#secondcontainer{
+    width: 320px;
+    /* font-family: 'Baloo Bhai'; */
+    align-self: flex-start;
+    display: flex;
+    /* This too is also a sub- container containing different flex-items*/
+    flex-direction: column;
+    flex-basis: 600px;
+    background-color: rgb(244, 224, 224);
+    text-decoration: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    font-weight: bolder;
+    flex-grow: 10;
+    position: relative;
+    top: 70px;
+    padding-bottom: 50px;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+#secondcontainer figure img{
+    width: 150px;
+    align-self: center;
+    border-radius: 80px;
+}
+
+#secondcontainer div p{
+    font-weight: bolder;
+}
+
+.article2{
+    /* font-family: 'Baloo Bhai';
+        Commenting out just for fun :) --> No worries here.
+        You might as well un-comment it. It won't make a tinniest bit of a difference */
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    flex-wrap:wrap ;
+    width: 1100px;
+    align-self: center;
+    text-align: left;
+    position: relative;
+    left: 150px;
+    bottom: 596px;
+    font-weight:500;
+}
+
+.article2 header img{
+    width:1100px;
+    border-radius: 12px;
+}
+
+.article2 p{
+    flex-grow: 10;
+    flex-shrink: 10;
+}
+
+.article2 header h3{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.coursesoffered{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 580px;
+    border: 4px solid darkblue;
+    background-color: rgb(22, 35, 6);
+    padding-bottom: 0px;
+}
+
+#courseStatement{
+    display: block;
+    width: 900px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    bottom: 30px;
+    color: rgb(120, 197, 197);
+}
+
+#course1{
+    align-self: center;
+    position: relative;
+    right: 170px;
+    border: 4px solid black;
+    padding: 50px;
+    margin-right: 10px;
+    flex-shrink: 3;
+    width: 25%;
+    text-align: center;
+    font-weight: bolder;
+    background-color: bisque;
+    bottom: 65px;
+    border-radius: 10px;
+}
+
+#course1:hover{
+    background-color: rgb(52, 39, 28);
+    color: lightgreen;
+    cursor: pointer;
+}
+
+#course2{
+    align-self: center;
+    position: relative;
+    left: 210px;
+    bottom: 243px;
+    border: 4px solid black;
+    padding: 50px;
+    flex-shrink: 3;
+    width: 25%;
+    text-align: center;
+    font-weight: bolder;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+#course2:hover{
+    background-color: rgb(52, 39, 28);
+    color: lightgreen;
+    cursor: pointer;
+}
+
+#course3{
+    align-self: center;
+    position: relative;
+    bottom: 235px;
+    right: 170px;
+    border: 4px solid black;
+    padding: 50px;
+    margin-right: 10px;
+    flex-shrink: 3;
+    width: 25%;
+    text-align: center;
+    font-weight: bolder;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+#course3:hover{
+    background-color: rgb(52, 39, 28);
+    color: lightgreen;
+    cursor: pointer;
+}
+
+#course4{
+    align-self: center;
+    position: relative;
+    left: 210px;
+    bottom: 415px;
+    border: 4px solid black;
+    padding: 50px;
+    flex-shrink: 3;
+    width: 25%;
+    text-align: center;
+    font-weight: bolder;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+#course4:hover{
+    background-color: rgb(52, 39, 28);
+    color: lightgreen;
+    cursor: pointer;
+}
