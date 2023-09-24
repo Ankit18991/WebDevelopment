@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table Design</title>
+    <style>
+        html{
+            font-size: 20px;
+            /* every rem will be mulgtiplied with this font size */
+        }
+        header{
+            margin: auto;
+            text-align: center;
+            background-color: black;
+            color: lightgreen;
+            width: 60%;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 3px solid darkblue;
+            width: 100%;
+            font-size: 20px;
+            background-color: rgb(6, 51, 51);
+            width: 78rem;
+        }
+
+        p {
+            line-height: 3px;
+        }
+
+        #table2 {
+            flex-shrink: 15;
+            border: 4px solid green;
+            text-align: center;
+            font-size: 20px;
+            padding: 1rem;
+            /* According to the main-container */
+            background-color: rgb(5, 18, 41);
+            color: lightgreen;
+            position: relative;
+            right: 6rem;
+            width: 15rem;
+        }
+
+        #table2 p {
+            font-size: 1em;
+            /* According to the immediate Parent,it will be multiplied with the font size of the first or the main parent or the parent after the immediate parent  .*/
+            /* Padding gets multiplied to the font - size while using em or rem(with html basic font size defined in the document) */
+        }
+
+        #table3 {
+            flex-shrink: 15;
+            width: 15rem;
+            border: 4px solid green;
+            text-align: center;
+            /* font-size: 30px; */
+            /* padding: 2em;
+                    It means padding according to 30px(in the same element, not respective to parent). Agr isme font size ko overwrite ki gayi hai toh em iske font size ke relative multiply hogi. Warna Parent ki font side ki hisab se. */
+            padding: 1rem;
+            
+            background-color: rgb(5, 18, 41);
+            color: lightgreen;
+            position: relative;
+            left: 16rem;
+            bottom: 14.6rem;
+        }
+
+        #table3 p {
+            font-size: 1em;
+        }
+
+        #table4 {
+            flex-shrink: 15;
+            width: 15rem;
+            border: 4px solid green;
+            text-align: center;
+            font-size: 20px;
+            padding: 1rem;
+            /* According to the main-container */
+            background-color: rgb(5, 18, 41);
+            color: lightgreen;
+            position: relative;
+            bottom: 12rem;
+            right: 6rem;
+        }
+
+        #table4 p {
+            font-size: 1em;
+        }
+
+        #table5 {
+            flex-shrink: 15;
+            width: 15rem;
+            border: 4px solid green;
+            text-align: center;
+            font-size: 20px;
+            padding: 1rem;
+            /* According to the main-container */
+            background-color: rgb(5, 18, 41);
+            color: lightgreen;
+            position: relative;
+            bottom: 26.75rem;
+            left: 16.4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h4>
+            Tables
+        </h4>
+    </header>
+
+    <section class="main-container">
+        <article>
+            <div id="table2">
+                <p>2 X 1 = 2</p>
+                <p>2 X 2 = 4</p>
+                <p>2 X 3 = 6</p>
+                <p>2 X 4 = 8</p>
+                <p>2 X 5 = 10</p>
+                <p>2 X 6 = 12</p>
+                <p>2 X 7 = 14</p>
+                <p>2 X 8 = 16</p>
+                <p>2 X 9 = 18</p>
+                <p>2 X 10 = 20</p>
+            </div>
+
+            <div id="table3">
+                <p>3 X 1 = 3</p>
+                <p>3 X 2 = 6</p>
+                <p>3 X 3 = 9</p>
+                <p>3 X 4 = 12</p>
+                <p>3 X 5 = 15</p>
+                <p>3 X 6 = 18</p>
+                <p>3 X 7 = 21</p>
+                <p>3 X 8 = 24</p>
+                <p>3 X 9 = 27</p>
+                <p>3 X 10 = 30</p>
+            </div>
+
+            <div id="table4">
+                <p>4 X 1 = 4</p>
+                <p>4 X 2 = 8</p>
+                <p>4 X 3 = 12</p>
+                <p>4 X 4 = 16</p>
+                <p>4 X 5 = 20</p>
+                <p>4 X 6 = 24</p>
+                <p>4 X 7 = 28</p>
+                <p>4 X 8 = 32</p>
+                <p>4 X 9 = 36</p>
+                <p>4 X 10 = 40</p>
+            </div>
+
+            <div id="table5">
+                <p>5 X 1 = 5</p>
+                <p>5 X 2 = 10</p>
+                <p>5 X 3 = 15</p>
+                <p>5 X 4 = 20</p>
+                <p>5 X 5 = 25</p>
+                <p>5 X 6 = 30</p>
+                <p>5 X 7 = 35</p>
+                <p>5 X 8 = 40</p>
+                <p>5 X 9 = 45</p>
+                <p>5 X 10 = 50</p>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
