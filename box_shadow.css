@@ -1,0 +1,119 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: black;
+}
+
+@media (max-width: 1344px){
+
+    #main-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+.card{
+    flex-basis: 350px;
+    font-size: 1rem;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer h1{
+    font-family: 'Dancing Script', cursive;
+    line-height: 6rem;
+    font-weight: 100;
+    padding: 0.5rem 0rem;
+    width: 100%;
+    border-radius: 1rem;
+    margin-left: 16%;
+}
+
+footer h1:hover{
+    text-shadow: 0.2rem 0.1rem rgb(8, 168, 133);
+    box-shadow: 0.5rem 0.2rem 3rem rgb(172, 199, 172);
+}
+
+}       
+
+#first-header::before{
+    background: url('https://images.unsplash.com/photo-1665928326037-6b9cf759738e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+/* body{
+    /* background-image: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); */
+
+.card{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* border: 0.3rem solid rgb(21, 226, 7); */
+    border-radius: 70rem;
+    font-size: 1.6rem;
+    width: 20%;
+    height: 60%;                            /* Parent container ka 60% */
+    text-align: center;
+    padding: 3% 3%;
+    color: white; 
+    text-shadow: 0.3rem 0.3rem white;    
+    /* text-shadow: x y blur <color> */
+    text-shadow: 0.3rem 0.3rem 1.5rem rgb(255, 255, 255);
+}
+
+.card:hover{
+    box-shadow: 1rem 1rem  rgb(21, 226, 7);
+    text-shadow: 0.12rem 0.1rem rgb(176, 214, 118); 
+    box-shadow: 1rem 1rem 1rem rgb(21, 226, 7);
+    /* box-shadow: <x off set> <y off set> <blur-radius> */
+    
+    box-shadow: 1rem 1rem 1rem 1rem rgb(21, 226, 7);   
+             /*The last one is spread-radius  */
+    cursor: pointer;
+}
+
+.Price-listing{
+    list-style:georgian;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    margin-top:7%;
+    font-size: 2rem;
+    line-height: 1.8rem;
+    font-family: 'Stylish', sans-serif;
+    font-weight: bolder;
+}
+
+footer h1{
+    font-size: 6.7rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    padding: 2.5rem 0rem;
+    width: 70%;
+    border-radius: 90rem;
+    margin-left: 16%;
+}
+
+footer h1:hover{
+    text-shadow: 0.2rem 0.1rem rgb(8, 168, 133);
+    box-shadow: 0.5rem 0.2rem 3rem rgb(172, 199, 172);
+}
