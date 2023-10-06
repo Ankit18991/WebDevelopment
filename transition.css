@@ -1,0 +1,127 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    color: white;
+    background: url('https://wallpapercave.com/dwp1x/wp9437194.jpg');
+
+}
+
+#main-header::before{
+    background: url('https://wallpapercave.com/dwp1x/wp9347330.jpg');
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.main-container{
+    width:20%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    /* border: 4px solid white; */
+    background-color: black;
+    transition-property:background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    background-image: url('https://wallpapercave.com/dwp1x/wp9437194.jpg');
+    background-position: center;
+}
+
+
+.main-container:hover{
+    /* transition-delay: 2s; --> Delay Before the actual transition begins */
+    background-color: rgb(9, 9, 54);
+    /* transform: background-image;
+    transition-duration: 2s; */
+    scale: 1.2;
+    /* transition: background-image 2s ease; */
+    transition: all ease 2s;
+    /* short-hand for transition: <transition-property> <transition-durstion> <transition-timing-function> <transition-delay> */
+    background-image: url('https://w0.peakpx.com/wallpaper/230/828/HD-wallpaper-deadpool-dead-gun-hero-humor-movie-pool-red-suoer-hero-swords.jpg');
+    background-position: center;
+}
+
+#caller-name{
+    border-radius: 50%;
+    margin-left: 20%;
+    margin-top: 30%;
+}
+
+#caller-display{
+    margin-left: 42%;
+    font-size: 1.5rem;
+}
+
+#clusture-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#clusture-info span{
+    margin-left: 2%;
+}
+
+#pick-up{
+    margin-top: 100%;
+    /* border: 4px solid red; */
+    border-radius: 50%;
+}
+
+#pick-up-icon
+{
+    border: 4px solid green;
+    border-radius: 50%;
+    animation-name: callerIcon;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function:ease-out;
+    /* animation-fill-mode: forwards;   --> Only Agr hmm chahte hain ki jahan tak bhi animation gaya ho, wahi pe jake ruk Jaye */
+    /* animation-fill-mode: backwards; */
+    animation-iteration-count: infinite;
+    position: relative;
+    box-shadow: 1rem 1rem 2rem lightgreen;
+}
+
+@keyframes callerIcon {
+    0%{
+        top:0rem;
+        left:0rem;
+    }
+
+    25%{
+        bottom: 10vh;
+        left:0vh;
+    }
+
+    50%{
+        bottom:20vh;
+        left: 0vh;
+    }
+
+    100%{
+        bottom: 30vh;
+        left: 0vh;
+    }
+}
+
+/* #pick-up-icon:hover{
+    scale: 1.1;
+    transition: all ease 2s;
+    transform: translateY(-20vh);
+} ---> Better if Uncommneted */
