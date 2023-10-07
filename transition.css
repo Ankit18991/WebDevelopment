@@ -1,14 +1,16 @@
-html{
+html {
     font-size: 10px;
 }
 
-body{
+body {
     color: white;
     background: url('https://wallpapercave.com/dwp1x/wp9437194.jpg');
 
 }
 
-#main-header::before{
+/* Adding background image to the header */
+
+#main-header::before {
     background: url('https://wallpapercave.com/dwp1x/wp9347330.jpg');
     content: "";
     width: 100%;
@@ -21,8 +23,9 @@ body{
     background-position: left;
 }
 
-.main-container{
-    width:20%;
+/* Adjusting the main container */
+.main-container {
+    width: 20%;
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -30,9 +33,10 @@ body{
     align-content: center;
     align-items: center;
     margin: auto;
-    /* border: 4px solid white; */
+    border: 4px solid white;
+    border-radius: 9rem;
     background-color: black;
-    transition-property:background-color;
+    transition-property: background-color;
     transition-duration: 2s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
@@ -41,9 +45,10 @@ body{
 }
 
 
-.main-container:hover{
+.main-container:hover {
     /* transition-delay: 2s; --> Delay Before the actual transition begins */
     background-color: rgb(9, 9, 54);
+    border-radius: 5rem;
     /* transform: background-image;
     transition-duration: 2s; */
     scale: 1.2;
@@ -54,18 +59,18 @@ body{
     background-position: center;
 }
 
-#caller-name{
+#caller-name {
     border-radius: 50%;
     margin-left: 20%;
     margin-top: 30%;
 }
 
-#caller-display{
+#caller-display {
     margin-left: 42%;
     font-size: 1.5rem;
 }
 
-#clusture-info{
+#clusture-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -73,24 +78,24 @@ body{
     text-align: center;
 }
 
-#clusture-info span{
+#clusture-info span {
     margin-left: 2%;
 }
 
-#pick-up{
+#pick-up {
     margin-top: 100%;
     /* border: 4px solid red; */
     border-radius: 50%;
 }
 
-#pick-up-icon
-{
+/* Styling the pick up icon using animations */
+#pick-up-icon {
     border: 4px solid green;
     border-radius: 50%;
     animation-name: callerIcon;
     animation-duration: 2s;
     animation-direction: normal;
-    animation-timing-function:ease-out;
+    animation-timing-function: ease-out;
     /* animation-fill-mode: forwards;   --> Only Agr hmm chahte hain ki jahan tak bhi animation gaya ho, wahi pe jake ruk Jaye */
     /* animation-fill-mode: backwards; */
     animation-iteration-count: infinite;
@@ -99,24 +104,44 @@ body{
 }
 
 @keyframes callerIcon {
-    0%{
-        top:0rem;
-        left:0rem;
+    0% {
+        top: 0rem;
+        left: 0rem;
     }
 
-    25%{
+    25% {
         bottom: 10vh;
-        left:0vh;
-    }
-
-    50%{
-        bottom:20vh;
         left: 0vh;
     }
 
-    100%{
+    50% {
+        bottom: 20vh;
+        left: 0vh;
+    }
+
+    100% {
         bottom: 30vh;
         left: 0vh;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width:1000px) {
+    #pick-up-icon {
+        border: 4px solid green;
+        border-radius: 50%;
+        height: 59px;
+        animation-name: callerIcon;
+        animation-duration: 2s;
+        animation-direction: normal;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+        position: relative;
+        box-shadow: 1rem 1rem 2rem lightgreen;
+    }
+
+    .main-container{
+        width: 80%;
     }
 }
 
