@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Rows and Grid- Gaps</title>
+    <style>
+        /* Styling Navigation Bar */
+        body{
+            color: white;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        #navbar{
+            margin-left: 4%;
+            display: grid;
+            grid-template-columns: repeat(4,3fr);
+            padding: 2% 0%;
+            position: relative;
+            /* So that the image takes just the needed Amount of space */
+            /* grid-gap: 1rem; */
+            right: 4%;
+             padding-left: 10%;
+        }
+
+        #navbar::before{
+            background: url('photo_2023-09-29_11-39-37.jpg') center center/cover;
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #navbar li{
+            list-style: none;
+        }
+
+        
+        #navbar li a{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: white;
+        }
+        
+        #navbar li a:hover{
+            background-color: black;
+            color: white;
+            border-radius: 2rem;
+            padding: 5%;
+        }
+
+        /* Main- Content Designing */
+        #paragraph-grid{
+            color: lightgreen;
+            display: grid;
+            grid-template-rows: 8fr 16fr;
+            /* Jitna frist row ko milla hai(8fr) , usse 2 times 2nd row ko milega(16fr) */
+            grid-template-columns: repeat(2,auto);
+            grid-gap: 1rem;
+        }
+
+        #paragraph-grid p{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="navbar">
+                <li>
+                    <a href="#navbar">Home</a>
+                </li>
+
+                <li>
+                    <a href="#paragraph-grid">Little Description</a>
+                </li>
+
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+
+                <li>
+                    <a href="#">Premium</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section>
+            <article>
+                <div id="paragraph-grid">
+                    <p>
+                      1.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem in, possimus deserunt sapiente optio corrupti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima excepturi architecto earum explicabo nihil perspiciatis accusamus, atque sapiente. Voluptatem similique obcaecati, sed nulla exercitationem repellendus assumenda earum ab corporis ullam eum? Laborum maiores illum itaque architecto voluptates odio beatae dolor, labore ut illo atque earum eum molestiae. Ad, voluptatum accusantium.
+                    </p>
+
+                    <p>
+                       2. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus excepturi animi, adipisci dicta repudiandae dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque autem, id dolor accusantium ab repellendus, nisi ea eos adipisci optio quaerat obcaecati odit nihil aliquam excepturi, illo ut eum deleniti. Vitae dolores numquam tempora esse deleniti pariatur molestias suscipit expedita iure aperiam consectetur unde, libero obcaecati corrupti saepe nesciunt!
+                    </p>
+
+                    <p>
+                       3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus maxime a labore ex vel molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quis dolorum sed impedit qui corporis perspiciatis debitis magnam, blanditiis odio aut dolore, ex quam ea, iure necessitatibus molestias? Mollitia error iusto similique nam, nulla sunt? Voluptate amet, cupiditate doloribus deserunt quam, labore accusamus perspiciatis similique modi quod, in tempore molestias?
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
