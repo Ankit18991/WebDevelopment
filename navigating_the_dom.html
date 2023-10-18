@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation and Manipulation</title>
+</head>
+<body>
+    <header class="container">
+        <h2>
+            DOM Navigation And Manipulation 
+        </h2>
+        <nav id="navbar" class="container">
+            <ul>
+                <li>
+                    Home
+                </li>
+
+                <li>Services</li>
+                <li>About</li>
+                <li>Premium</li>
+                <li>More About Us</li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        let string = "Utkarsh";
+        console.log(string);
+
+        let header = document.getElementById('navbar');
+        console.log(header);
+
+        let containers = document.getElementsByClassName('container');
+        console.log(containers);
+        //  Index accessing like Arrays
+
+        let element_Selector = document.querySelectorAll('#navbar li');
+        console.log(element_Selector);
+        // Index accessing like arrays
+
+    </script>
+</body>
+</html>
