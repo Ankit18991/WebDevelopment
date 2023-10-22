@@ -1,0 +1,241 @@
+<!-- Mobile view is better for this code and design :) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listening | Javascript</title>
+    <style>
+        /* Main container */
+        .container {
+            /* border: 4px solid green; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-areas:
+                'para para para button'
+            ;
+            grid-row-gap: 0.5%;
+
+            overflow: auto;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: rgb(19, 39, 23);
+            /* height: 80vh; */
+            border-radius: 15px;
+        }
+
+        #para {
+            grid-area: para;
+            /* border: 4px solid blue; */
+            /* background-color: rgb(29, 4, 57); */
+            color: rgb(172, 196, 255);
+            /* align-self: center; --> Can Do it but won't do it just for a clean code */
+        }
+
+        /* Designing Button */
+        #btn {
+            text-align: center;
+            grid-area: button;
+            /* border: 4px solid blue; */
+            background-color: rgb(42, 59, 53);
+            height: 10vh;
+            color: white;
+            position: relative;
+            top: 90%;
+            left: 10%;
+            width: 50%;
+            display: inline-block;
+            cursor: pointer;
+            box-shadow: 12px 14px 6px 4px black;
+            border-radius: 12px;
+        }
+
+        #btn:hover {
+            box-shadow: -12px -9px 10px 8px rgb(30, 18, 18);
+            scale: 1.1;
+            transition: all ease 0.5s;
+        }
+
+        header {
+            grid-area: header;
+            /* border: 4px solid blue; */
+            background-color: rgb(29, 4, 57);
+            text-align: center;
+            color: lightgreen;
+        }
+
+        span {
+            color: whitesmoke;
+        }
+
+        /* Firing Media queries :- */
+        @media (max-width: 1018px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas:
+                    'para'
+                    'para'
+                    'button'
+                ;
+
+                background-color: rgb(45, 2, 42);
+            }
+
+            #para {
+                text-align: left;
+                background-color: rgb(3, 28, 50);
+                color: white;
+            }
+
+            #btn {
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>
+            It's Just a header
+        </h2>
+    </header>
+
+    <section>
+        <article>
+            <div class="container">
+
+                <p id="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem maiores veritatis atque molestiae
+                    adipisci, iure sit aspernatur tempore vitae aperiam at quisquam ea harum nulla dignissimos, corporis
+                    voluptates eligendi magnam commodi doloremque perferendis deserunt alias excepturi ad. Illo eveniet,
+                    iusto magni quas commodi reiciendis quibusdam in beatae, fuga est libero odio maxime explicabo sit
+                    vel, cum optio deleniti dicta fugiat pariatur quaerat eaque. Nam repellat exercitationem facilis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aut doloremque fugiat. Soluta a rerum
+                    repellendus inventore aspernatur porro unde blanditiis libero laudantium, tempora nam at harum error
+                    quam dolorum earum impedit reiciendis assumenda laborum eligendi obcaecati. Corrupti voluptatem
+                    cupiditate aliquam et tempore esse voluptate sapiente quidem quam iusto laborum, reprehenderit alias
+                    error minima nihil officiis commodi eligendi cumque itaque. Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Doloremque beatae voluptas hic dignissimos soluta repudiandae ipsa quisquam
+                    eligendi assumenda aperiam, quos dolores earum quidem molestiae odit doloribus explicabo. Neque
+                    itaque quod voluptate modi tempore aspernatur maiores tenetur pariatur. Obcaecati voluptate
+                    architecto fugit deleniti, animi hic molestias labore, saepe quo ex necessitatibus! Impedit quam rem
+                    minima quidem ea amet error. Minus qui nihil atque voluptates. Voluptatibus possimus, pariatur
+                    distinctio incidunt dolore nostrum numquam explicabo adipisci obcaecati quia hic sed, libero
+                    quibusdam velit ab vitae sapiente optio laborum accusantium dolorum sint ullam architecto quidem
+                    deleniti! Ex cupiditate voluptatibus eligendi eaque, natus quisquam optio officia excepturi et
+                    aspernatur distinctio architecto autem, fuga commodi nulla numquam quidem? Quibusdam assumenda,
+                    aliquid nisi officiis tempore qui! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Corporis reprehenderit quas praesentium quae deserunt corrupti quaerat dolor consequuntur inventore
+                    nemo, ad enim nostrum ullam harum autem fugiat id? Alias provident eius reiciendis perferendis
+                    magni, distinctio quia, asperiores ab, voluptate neque possimus fugiat nostrum saepe ipsam?
+                    Molestias suscipit nemo atque quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                    temporibus aliquam odit distinctio pariatur nemo voluptates cupiditate illo, iusto sequi laudantium
+                    molestiae tempore ipsam magnam provident ullam voluptatibus quia! Eos, ratione qui quaerat
+                    distinctio quos ipsum adipisci culpa cupiditate ea esse? Aperiam, consequuntur nostrum? Sit velit
+                    quod nihil, facere adipisci error aliquid. Deleniti repellendus temporibus inventore ipsam dolore
+                    quasi dolorem! Voluptates sed quod nisi impedit dolores placeat doloremque tenetur, suscipit alias
+                    veniam animi nesciunt culpa, accusantium illo enim maiores nihil quo cum, repudiandae modi nulla
+                    minima delectus excepturi odio! Minus, nihil excepturi officia fugit dolor soluta reprehenderit esse
+                    incidunt doloremque quas eveniet nemo, hic rem. Praesentium tempora blanditiis illo quo! Cum
+                    voluptate eos cupiditate alias aut ipsam iusto tempore a dolorem soluta aperiam facilis, corrupti
+                    similique quisquam. Recusandae illum saepe reiciendis quo molestiae ipsam repellendus repellat
+                    labore, maxime ratione aliquid quod doloremque quibusdam eum autem nemo velit laboriosam accusantium
+                    adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nostrum eum, veniam
+                    dignissimos praesentium suscipit laborum cum similique ex, rerum ducimus iure nam perspiciatis
+                    mollitia! Fugit cupiditate minima tempora suscipit minus ex delectus magni vel totam magnam dolore
+                    aliquam voluptatem explicabo eum mollitia fugiat nemo quod, ipsam recusandae doloremque. Commodi,
+                    praesentium sint. Molestias nemo voluptate id atque perferendis enim qui suscipit saepe repellat
+                    inventore corporis ab quod ea ipsum natus culpa dicta repudiandae dolore, numquam quisquam modi unde
+                    esse voluptatibus. Possimus ipsa consequatur exercitationem? Nobis iste minima iusto, aliquam
+                    quaerat delectus officiis ullam nemo provident minus. Ea numquam accusamus facere sit quae est neque
+                    praesentium reprehenderit delectus atque voluptatem molestiae adipisci maiores placeat voluptatum
+                    autem aliquam aspernatur doloribus, iusto eius dolore. Iusto totam quis deleniti aut sapiente
+                    consequuntur? Recusandae vel molestiae laborum voluptatibus deleniti natus fugiat, eos ratione
+                    voluptatem rem soluta exercitationem obcaecati nobis et, atque minus vitae accusantium! Alias
+                    repudiandae cumque nulla maxime reprehenderit, veritatis et explicabo deserunt, eum deleniti nam!
+                    Eum incidunt doloremque optio voluptatibus alias sed fuga, tempore voluptas nisi veniam vero officia
+                    ratione quisquam. Perspiciatis temporibus assumenda atque asperiores voluptas. Aspernatur tempore
+                    enim sit qui praesentium, animi odit, cum, atque dolore recusandae laudantium. Architecto ducimus
+                    odit doloribus laboriosam eos quisquam, cumque saepe dolore maxime, eveniet blanditiis debitis? Ad
+                    sequi totam vitae incidunt quis asperiores excepturi saepe ea doloremque eligendi! Minus quas ex
+                    perspiciatis iure dolore debitis, ab illum saepe incidunt. Alias, cumque. Consequatur, aut quas
+                    dolores ipsa quasi quaerat veniam eius, quia rerum asperiores quo voluptate? Quae vero nemo in
+                    officia possimus porro dolore recusandae, debitis cum perferendis ratione sequi, nesciunt aliquam
+                    repellat! Placeat optio architecto assumenda eius porro possimus enim? Sint ipsa ullam perspiciatis
+                    soluta aliquam, repellendus ea neque ad dolorem voluptates illum minima, suscipit sequi aut fugit a
+                    maiores tempore, quisquam velit earum omnis numquam hic dolor! Illo sunt odit itaque qui aperiam
+                    saepe facilis vero deleniti molestiae sequi illum non dolorem ex perferendis repellendus fuga,
+                    architecto commodi? Sint veniam quas sit vitae, quo distinctio autem voluptate nihil exercitationem
+                    inventore tempora esse sapiente nobis repudiandae officiis, fugit officia molestias odit commodi
+                    nulla assumenda? Animi, quis mollitia nisi molestiae cupiditate hic deserunt modi beatae aperiam
+                    quas accusamus eum quisquam iste adipisci eligendi dolor maiores dolorem quaerat eius earum alias?
+                    Excepturi quam reiciendis iure officiis maiores. Rem nulla ad eius delectus dolorem corrupti quia
+                    pariatur, dolore, error laborum, ipsa voluptate rerum quisquam dicta cum officia. Sequi suscipit
+                    tempore excepturi fugit obcaecati laudantium molestiae pariatur aliquam, commodi numquam debitis
+                    vero! Quo labore iure nesciunt molestiae delectus qui optio reiciendis dolorem enim architecto, vel
+                    inventore voluptatum unde assumenda placeat rem, eum quaerat voluptate perspiciatis repellat beatae.
+                    Earum neque blanditiis dolor molestiae, aliquam quas maiores odio architecto doloribus iste
+                    recusandae qui veniam eligendi deleniti?
+                </p>
+                <div>
+                    The time = <span id="time"></span>
+                </div>
+                <button id="btn">Show/Hide</button>
+                <!-- For click Event -->
+            </div>
+        </article>
+    </section>
+
+    <script>
+        // These keyWords are only valid on normal fuctions, no ton the functions of the eventListeners.......
+        var count = 0;
+        let paragraph = document.getElementById('para');
+        function sign_Up(username) {
+            console.log(`Mouse Over in the paragraph Mr ${username} `);
+            let confirmation_sign_up = confirm("Sign Up with the website ?");
+            // console.log(confirmation_sign_up);
+            count = count + 1;
+            console.log("COUNT = " + count);
+        }
+
+        
+        timeOut = setTimeout(sign_Up, 2000, "utkarsh");
+        
+        // runs once and it is used to execute a function or evaluates an exprssion after a specified number of milliseconds
+
+        // clearTimeout(intervalId);
+        // If the function has not already been executed this does not allow it to run even once. It prevents the function from running even once.....
+        
+        // timeOut variable stores an id (a number) and that id will be used for clearTimeout......
+        // console.log(timeOut);
+        
+        // intervalId = setInterval(sign_Up, 2000, 'Suraj');
+        // console.log(intervalId);
+
+        
+        // clearInterval(intervalId);
+        // Lets say you go to a web page and you are reading an article and the sign up pop up appears after 20s, and once you sign up ,so, in your web page page you won't want the sign up page to pop up again once you have signed up onto the website.
+        // setInterval(run,1000,"ANKIT");
+
+        function displayTime() {
+            time = new Date();
+            // Creating of variable named 'time'
+            // console.log(time);  --> Showa the time as 1000ms passes inside the console
+            document.getElementById('time').innerHTML = time;
+            // Addinmg the variable time variable within the empty span with the id = 'time'
+        }
+
+        setInterval(displayTime, 1000);
+
+    </script>
+</body>
+
+</html>
