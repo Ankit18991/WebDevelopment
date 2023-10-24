@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Arrow Function </title>
+</head>
+<body>
+    <header>
+        <h2>
+            Arrow Functions 
+        </h2>
+    </header>
+
+    <article>
+        <div>
+            <p>
+                This is Just a very Simple demonstrations on Javascript Arrow Function for Beginners.
+                It is My Hope that You Guys Get And this coode is helpful.
+            </p>
+        </div>
+    </article>
+
+    <script>
+        // function greet(){
+        //     console.log('Good Morning to You too');
+        // }  --> This function can also Be written as follows and it is actual a shortcut provided by the arrow function
+        
+        //1. Arrow Function with Normal functions 
+        let greet = () =>{
+            console.log('GOOD MORNING MATES');        
+        }
+
+        greet();
+
+        // 2. Arrow function with setTimeout()
+        setTimeout(() => {
+            console.log('My Name is Mr. India');
+        }, 3000);
+
+        // 3. Arrow function with setinterval()
+        let intervalId = setInterval(() => {
+            console.log('Arrow function(=>) with SetInterval repeating every 2 seconds');
+        }, 2000);
+
+        clearInterval(intervalId);
+
+        // 4. With the single return type functions
+        let return_Sum = (a,b) => a + b;
+        console.log(return_Sum(8,9));
+
+        let return_Half = (a) => (a/2);
+        console.log(return_Half(8));
+
+        // 5. Use of Lexical 'this' (as this pointer in c++)(OOPs supporting language)
+        let obj = {
+            names : ["ankit", "Rohan", "Utkarsh", "Gaurav"],
+            message: "Hi",
+            all_name(){
+                // message: "Hi";
+                message: "Hi";
+                this.names.forEach((element) => {
+                    // console.log("Hello , " + this.message + " " + element); --> IT will no access the message inside the all_name() method, but if the message was thew direct member of the object obj , then it would be accessed because of the this. This indicate the key of the object that is calling the function.
+
+                    console.log("Hello , " + this.message + " " + element);
+                });
+            }
+            // It accesses the elelemt of the same object
+        }
+        console.log(obj.all_name());
+
+    </script>
+</body>
+</html>
