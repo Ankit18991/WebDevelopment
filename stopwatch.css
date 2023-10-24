@@ -1,0 +1,198 @@
+*{
+    /* background-color:  rgb(3, 21, 37); */
+    color: whitesmoke;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+/* Styling of Header */
+header{
+    text-align: center;
+    border: 4px solid lightgreen;
+    font-weight: 600;
+    background-color:  rgb(3, 21, 37); 
+}
+/* Styling the container */
+.container{
+    border: 4px solid lightblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: black;
+    height: 70vh;
+    width: auto;
+}
+
+.container::before{
+    content: "";
+    /* background: url('stopwatch_background.jpg') center center/cover; */
+    background: url('timerbackgound3.jpg') center center/cover;
+    position: absolute;
+    top: 2%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: saturate(100%);
+}
+
+/* Styling the icons */
+.container #icons{
+    border: 4px solid white;
+    display: flex;
+    /* justify-content: center; --> To keep the menu of the stopwatch manipulation in the middle*/
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 41, 55);
+    overflow: hidden;
+    z-index: 3;
+    flex-wrap: wrap;
+    border-radius:10%;
+    cursor: all-scroll;
+}
+
+.container #icons img:hover{
+    scale: 1.1;
+    transition: all ease 1s;
+    cursor: pointer;
+    /* filter: contrast(10); */
+}
+
+.container #icons img:active{
+    scale: 1.1;
+    transition: all ease 1s;
+    filter: brightness(12);
+}
+
+#icons img:first-child{
+    width: 3.5%;
+    height: auto;
+    margin-right: 4%;
+    border-radius: 50%;
+}
+
+#icons img:nth-child(2){
+    width: 4%;
+    height: auto;
+    margin-right: 4%;
+    border-radius: 50%;
+}
+
+#icons img:nth-child(3){
+    width: 3.5%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Styling the stopwatch */
+#time{
+    /* margin: auto; --> to place the element in the middle*/
+    /* align-self: center; --> To align it in center(try it out) if you want to */
+    /* border: 4px solid green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 40vh;
+    width: 65%;
+    box-sizing: border-box;
+    border-radius: 10%;
+    font-size: 6rem;
+    font-weight: bolder;
+    z-index: 2;
+    position: relative;
+    animation-name: timer;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    transition-delay: 2s;
+    transition: all ease 1s;
+}
+
+#time:hover{
+    scale: 1.2;
+}
+
+@keyframes timer{
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+
+    50%{
+        top: 5%;
+    }
+
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+
+#hour{
+    align-self: center;
+    background: rgb(25, 46, 67) center center/cover;
+}
+
+#minute{
+    align-self: center;
+    background: rgb(31, 110, 5) center center/cover;
+}
+
+#second{
+    align-self: center;
+    background: rgb(207, 15, 73) center center/cover;
+}
+
+/* Styling Of Footer */
+footer{
+    border: 6px solid wheat;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: left;
+    background-color:  rgb(3, 21, 37); 
+    filter: opacity(1);
+    position: relative;
+    margin-top: 3%;
+    z-index: 7;
+    font-size: 3rem;
+}
+
+footer::before{
+    content: "";
+    background: url('contact_Background.jpg') center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+footer div h2{
+    text-align: center;
+    border: 4px solid blue;
+}
+
+/* Media - Queries */
+@media (max-width: 1000px)
+{
+    #time{
+        font-size: 3.5rem;
+    }
+
+    .container::before{
+        top: 40%;
+    }
+
+    footer{
+        text-align: center;
+    }
+}
