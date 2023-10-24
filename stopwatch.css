@@ -182,17 +182,29 @@ footer div h2{
 }
 
 /* Media - Queries */
-@media (max-width: 1000px)
-{
-    #time{
-        font-size: 3.5rem;
-    }
-
-    .container::before{
-        top: 40%;
-    }
-
-    footer{
-        text-align: center;
-    }
-}
+ @media (max-width: 1000px) 
+ { 
+     #time{ 
+         font-size: 3.5rem; 
+     } 
+  
+     .container::before{ 
+         top: 40%; 
+     } 
+     
+     #icons{
+       width: 80vw;
+       background-color: darkgrey;
+       height: 20vh;
+     }
+     
+     footer pre{
+       font-size: 10px;
+     }
+     
+      .container::before{
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJw4TntPbtPHTEbn2hDVB27wx5KAuNCla3sw&usqp=CAU') center center/cover;
+        top:0px;
+      }
+ 
+ }
