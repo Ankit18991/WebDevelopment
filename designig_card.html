@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Designing | HTML and CSS </title>
+    <!-- We will obviously include the styling in the new file for projects , but for small mini projects:- -->
+    <!-- We could also do it easily without using flex-box , using box model and ;'margin: auto' to center the div after giving the widths. -->
+    <style>
+
+        /* Universal Selector */
+        *{
+            box-sizing: border-box;
+        }
+
+        /* Root Element */
+        html{
+            font-size: 20px;
+        }
+
+        /* Styling Header */
+        #main-header{
+            background-color: rgb(3, 21, 37);
+            color: whitesmoke;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Styling main container */
+        .main-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;   
+        }
+
+        .main-container figure img{
+            border: 4px solid black;
+        }
+
+        /* Styling image and Genre */
+        /* mage is styled in the html itslef To restore the resolution of image */
+        .main-container article:first-child{
+            border: 4px solid rgb(14, 52, 85);
+            width: 22%;
+            border-top-right-radius: 4.5%;
+            border-top-left-radius: 4.5%;
+            border-bottom: 0px;
+            overflow: hidden;
+        }
+        
+        .main-container article:first-child:hover{
+            box-shadow: -15px -15px 7px 2px rgb(9, 32, 18);
+            cursor:grab;
+            transition: all ease 2.5s;
+            filter: saturate(5);
+        }
+
+        /* aligning figure */
+       #article-1 div:first-child figure{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+       }
+
+       /* styling keywords(nature and lake) */
+        #article-1 div:nth-child(2){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-left: 1%;
+            font-weight: 600;
+            font-size: 0.6rem;
+            line-height: 0.5rem;
+        }
+        
+        #article-1 div:nth-child(2) div{
+            margin-left: 3%;
+            border: 1px solid rgb(183, 180, 186);
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        #article-1 div:nth-child(2) div:hover{
+            cursor: pointer;
+            scale: 1.1;
+            background: rgb(3, 71, 56) center center/cover;
+            color: white;
+            box-shadow: 1px -3px 2px black;
+            transition: all ease 0.3s;
+        }
+
+        /* Styling Paragraph of the card */
+        .main-container article:nth-child(2){
+            border: 4px solid rgb(14, 52, 85);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            width: 22%;
+            border-bottom-right-radius: 4.5%;
+            border-bottom-left-radius: 4.5%;
+            border-top: 0px;
+        }
+
+        .main-container article:nth-child(2) div p:hover{
+            transform: translateY(-15%);
+            font-weight: 500;
+            transition: all ease 1.5s;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* Designing 'read-more' button */
+        #btn{
+            width: 33%;
+            align-self: center;
+            border-radius: 25px;
+            padding: 4%;
+            font-weight: bold;
+            font-size: 0.6rem;
+            text-align: center;
+            background-color: rgb(165, 205, 245);
+            color: blue;
+            border: 2px solid rgb(165, 205, 245);
+            cursor: pointer;
+        }
+
+        #btn:hover{
+            scale: 1.07;
+            background: rgb(165, 205, 245) center center/cover;
+            box-shadow: 1px -3px 2px black;
+            transition: all ease 0.3s;
+        }
+        
+        #btn:active{
+            filter: contrast(4);
+            border-radius: 30%;
+        }
+
+        /* DesignNing Footer */
+        footer{
+            background: rgb(3, 21, 37) center center/cover;
+            color: white;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+            font-weight: bolder;
+            font-size: 1.7rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <h2>
+            Designing Card
+        </h2>
+    </header>
+
+    <main>
+        <section class="main-container">
+            <article id="article-1">
+                <div>
+                    <figure>
+                        <img src="nature.jpg" style="width: 20.5vw; 
+                        height: auto; border-radius: 5%;" alt="Nature Image">
+                    </figure>
+                    <figcaption> </figcaption>
+                </div>
+
+                <div>
+                    <div>Nature</div>
+                    <div>Lake</div>
+                </div>
+            </article>
+
+            <article>
+                <header>
+                    <h3> Lago di Braies</h3>
+                </header>
+
+                <div>
+                    <p>
+                        I just Want to Thank codeWithHarry For everything that he is Doing, All By himself and I think We all should appreciate his efforts.
+                    </p>
+                </div>
+                <button id="btn"> Read More </button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            UtkarshEnterprises &copy;
+        </p>
+    </footer>
+</body>
+</html>
