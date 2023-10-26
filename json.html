@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON | Javascript</title>
+</head>
+<body>
+    <header>
+        <h2>
+            No CSS , Just look at the console while running the code 
+        </h2>
+    </header>
+
+    <script>
+        // JSON is a format for storing and tranporting data.
+        // JSON is often used when data is sent/transported from the server to the web page.
+        // What isd JSON?
+        // JSON stads for Javascript Object Notation 
+        // It is a lightweight data sharing format
+        // It is language independent
+        // It is a "self-describing" and easy to understand.
+
+        // JSON syntax is derivd from JS object notation syntax, but the JSOn fromat is string only
+        // But the JSON format is text only
+        // The code for reading and generating JSON data can be written in any programming language
+
+        let jsonObj = {
+            name: "Utkarsh",
+            course: "BCA",
+            rollno: 225087,
+            married: true
+        };
+
+        // name, course, rollno , married are the properties of this Javascript object And they are stringified using JSON.
+
+        console.log(jsonObj);
+
+        // We can also transport these properties of an object one by One , so why do need JSON?
+        // Sometimes, we may get nested objects, i.e, an object within our parent object and functons withing the parent object or nested obbject or both. In that case, it is difficult to transport each property of the object one by one and convert each of those properties into a string to parse them form server to Web page. In such Case we need JSON. JSON converts or stores the whole object in string format at once. We don't need to tranport each property and convert each property into string one by one to parse them. JSON stringifies the whole object at once.
+        
+        let myJsonStr = JSON.stringify(jsonObj);
+        console.log(myJsonStr);
+
+        // Thestringify function is used to convert a valid a valid javascriopt object into a string . Once , the object is converted into a string ,we can apply all the string funtions to it. For example, we want to replace "true" with " false" .
+        
+        // myJsonStr = myJsonStr.replace("true", false);   --> It will also replace true wth false
+        // myJsonStr = myJsonStr.replace(true, false);   --> It will also replace true wth false
+        myJsonStr = myJsonStr.replace("true", "false");  // --> It will also replace true wth false
+
+        console.log(myJsonStr);
+
+        let newstr = myJsonStr.substring(1, 20);
+        console.log(newstr);
+        // From index 1 to 19(20 - 1)
+        newstr = myJsonStr.substr(1, 20);
+        console.log(newstr);
+
+        // Now to convert string again into the object
+        let newJsonObj = JSON.parse(myJsonStr);
+        console.log(newJsonObj);
+
+    </script>
+</body>
+</html>
