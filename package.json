@@ -1,0 +1,18 @@
+{
+  "name": "npmmodules",
+  "version": "1.0.0",
+  "description": "Just an NPM",
+  "main": "NPM_module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Utkarsh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
