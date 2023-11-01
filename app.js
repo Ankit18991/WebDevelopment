@@ -1,48 +1,48 @@
-// What is express?
-// Express is a web-application framework for node.js. Express can do url parsing automatically  , and we created custom backend using if-else statement. express does it , does the url parsing for you. It also handles routing.
-//  It is uch easier to create a Custom Backend in express than it is without it..
-
 const express = require('express');
-// We Imported the module of express
-
+const fs = require('fs');
 const app = express();
+
 const port = 80;
-// We made an app of Express(These two steps are must do if we are making the express app)
+const home = fs.readFileSync('D:/webdevelopment/Javascript/Node.js/Express/customModule_express/home.html');
 
-// Sometimes we might wanna send() json or Status code........
-app.get("/", (req, res)=>{
-    // .get for GET requests 
-    // If Someone goes into '/' of this app, a function will get executed
-    res.status(200).send("This is the Home Page of my first app using expreess by me ,Utkarsh");
+const about = fs.readFileSync('D:/webdevelopment/Javascript/Node.js/Express/customModule_express/about.html');
+
+const services = fs.readFileSync('D:/webdevelopment/Javascript/Node.js/Express/customModule_express/services.html');
+
+const membership = fs.readFileSync('D:/webdevelopment/Javascript/Node.js/Express/customModule_express/membership.html');
+
+const contact = fs.readFileSync('D:/webdevelopment/Javascript/Node.js/Express/customModule_express/contact.html');
+
+app.get("/", (req, res) => {
+    res.send(home);
 });
 
-app.get("/about", (req, res)=>{
-    // If Someone goes into '/' of this app, a function will get executed
-    res.send("This is About page Of my first app using expreess by me ,Utkarsh");
-    // app.get hits the get request at any end point .... 
-    // Here we handled the get request at the '/about' endpoint
+app.get("/about", (req,res) => {
+    res.send(about);
 });
 
-app.get("/this", (req, res)=>{
-    // If Someone goes into '/' of this app, a function will get executed
-    res.status(404).send("This Page Is Not Found .. \n" + "ERROR 404 !!! \n");
-    // app.get hits the get request at any end point .... 
-    // Here we handled the get request at the '/this' endpoint
+app.get("/services", (req, res) => {
+    res.send(services);
 });
 
-app.post("/about", (req, res)=>{
-    // .post for the post request..
-    // If Someone goes into '/' of this app, a function will get executed
-    res.send("This is POST request About page Of my first app using expreess by me ,Utkarsh");
-    // app.post hits the post request at any end point .... 
-    // Here we handled the post request at the '/about' endpoint
+// To get the post request using express at the endpoint '/services'
+app.post("/services", (req, res) => {
+    // res.send("This is A post request");
+    // Only one of these send responses work.  The on eat the top gets sent as a response to the api request at a specific endpoint
+    res.send(services);
+});
+
+
+app.get("/membership", (req, res) => {
+    res.send(membership);
+});
+
+app.get("/contact", (req, res) => {
+    res.send(contact);
+    // If we make a get api request on the port 80 with the endpoint '/contact', you will get that file as the response in the postman..
 });
 
 app.listen(port, () => {
-    console.log(`The application Started Success Fully on port ${port}`);
-    // Here we handled t he post request at the '/about' endpoint
+    console.log(`The Application successfully On the post ${port}`);
+    console.log(`We also used the nodemon to contantly udate the server to constantly cope wioth the changes made in the original file`);
 });
-
-// We are gonna test this app using postman application
-// NOTE: To run the file ,w e used the syntxz(after going to the parent folder of that file):-
-        // node <file_name>

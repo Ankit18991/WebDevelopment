@@ -1,14 +1,11 @@
 {
-  "name": "codewith_utkarsh",
+  "name": "navbar",
   "version": "1.0.0",
-  "description": "This is a package we created while studying and exploring node and express",
+  "description": "This is just the desciption to under the creation of custom backened ",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Utkarsh Kumar",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+  "author": "utkarh Kumar singh",
+  "license": "ISC"
 }
