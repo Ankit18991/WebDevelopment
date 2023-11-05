@@ -6,57 +6,44 @@ const app = express();
 
 const port = 80;
 
-// For serving static files:-
-app.use('/static', express.static('static'));
-// '/static' is the url 
-// When we serve the static file, we can't really executre the file on the server, the raw file will be visible on my server(not it's by product)
+// EXPRESS SPECIFIC STUFF
+app.use('/static', express.static('static'));  // For serving static files
+// We are gonna use a middleware to get the data of the user as soon as he or she posts request/submits the form
+app.use(express.urlencoded());
+// This middleware helps to bring your form's data to Express
 
-// Set the template engine as pug
-app.set('view engine', 'pug');
+// PUG SPECIFIC STUFF/CONFIGURATION
+app.set('view engine', 'pug');      // Set the template engine as pug
+app.set('views',path.join(__dirname, 'views'));   // Set the View directory
 
-// Set the View directory 
-app.set('views',path.join(__dirname, 'views'));
-
-// Our Pug demo endpoint 
-app.get("/demo", (req, res)=>{
-    res.render('demo', { title: 'Hey harry', message: 'Hello there and Thanks fro telling me how to use pubG!' })
-    // Here 'demo' is the name of the pug file in the views directory
-    // From pug express Website(guide option from the navigation bar)
-    // We can also render HTML files too... 
-});
- 
-app.get("/", (req, res) => {
-    res.send("Hom epage Via get Request");
+// ENDPOINTS
+app.get("/",(req, res) =>{
+    const con = "This is The best content on pug on the internet so far, so use it wisely."
+    const params = {'title': 'pubG is the best game', 'content': con};
+    res.status(200).render('index.pug',params);
+    // we will also have to send or render the variable that we are gonna use on the pug html file
 });
 
-app.get("/about", (req,res) => {
-    res.send("About Page via Post request");
-});
-
-app.get("/services", (req, res) => {
-    res.send("services page via get request");
-});
-
-// To get the post request using express at the endpoint '/services'
-app.post("/services", (req, res) => {
-    // res.send("This is A post request");
-    // Only one of these send responses work.  The on eat the top gets sent as a response to the api request at a specific endpoint
-    res.send("services page via post requrest");
+app.post("/",(req, res) =>{
+    let naam = req.body.name;
+    age = req.body.age;
+    gendar = req.body.gender;
+    address = req.body.address;
+    more = req.body.more;
+    // we accessing the values in the name attribute of the input tag of our form..Whatyever we wrote in the name attribut of inout tag, we are using to access it here in variables.(we did .name, .address ,.. to access it one by one)
+    // TO get the response of use in the form
+    let outputToWrite = `The name of the Client is ${naam} \n ${age} years old \n ${gendar} \n Residing at --> ${address} \n More About Him/Her: ${more} \n \n`;
+    fs.writeFileSync("./static/output.txt",outputToWrite);
+    const con = "You have Filled THe form";
+    const params = {'message': 'Your From Has been Submitted Succesfully', 'content': con};
+    res.status(200).render('index.pug',params);
 });
 
 
-app.get("/membership", (req, res) => {
-    res.send("Member ship page via Get Request");
-});
-
-app.get("/contact", (req, res) => {
-    res.send("The contact Page via the get request");
-    // If we make a get api request on the port 80 with the endpoint '/contact', you will get that file as the response in the postman..
-});
-
+// START THE SERVER
 app.listen(port, () => {
     console.log(`The Application successfully On the post ${port}`);
     console.log(`We also used the nodemon to contantly udate the server to constantly cope wioth the changes made in the original file`);
 });
 
-// In case if the oub template does notload, just delete the node-modules folder and reinstall everything :)
+// In case if the pug template does notload, just delete the node-modules folder and reinstall everything :)

@@ -1,3 +1,120 @@
 *{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    background-color: black;
+}
+
+/* List Styling */
+nav{
+    background-color: rgb(29, 29, 29);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    color: white;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+}
+
+ul li {
+    list-style: none;
+    padding: 1rem;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+h2{
+    text-align: center;
+}
+
+/* https://www.google.com/search?q=zym+website+black+and+white&tbm=isch&ved=2ahUKEwi2zJf_o6qCAxUITmwGHUyKDUkQ2-cCegQIABAD&oq=zym+website+black+and+white&gs_lcp=ChJtb2JpbGUtZ3dzLXdpei1pbWcQAzIFCAAQogQyBQgAEKIEMgUIABCiBDIFCAAQogQyBQgAEKIEOgcIABCKBRBDOgUIABCABDoGCAAQCBAeOgkIABAYEIAEEAo6BwgAEA0QgAQ6CAgAEAgQHhANUOsJWIU7YIg9aABwAHgAgAH8AYgB9yaSAQYwLjE2LjmYAQCgAQHAAQE&sclient=mobile-gws-wiz-img&ei=ZDBGZbaKEIicseMPzJS2yAQ&bih=665&biw=360&client=ms-android-oneplus-terr1-rso2&prmd=imvn#imgrc=frfQkRuYK3efyM&imgdii=HsoC62yLXukvQM */
+
+/* Desgninng the main_container */
+
+.container{
+    margin: 1rem;
+    max-width: 70%;
+    margin: 12px auto;
+}
+
+.container h2{
+    color: white;
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+.container::before{
+    content: "";
+    background: url('https://c4.wallpaperflare.com/wallpaper/103/248/971/fitness-girls-hd-4k-wallpaper-preview.jpg') center center/cover;
+    /* background-image: url('/static/Gym_bakcground_2.jpg') center center/cover; */
+    position: absolute;
+    top: 3vh;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    /* visibility: 1; */
+}
+
+/* Utility Classes( Targetting OUr Form) */
+form{
+    margin-left: 15vw;
+    margin-top: 10vh;
+}
+
+hr{
+    width: 50%;
+    position: relative;
+    left: 35%;
+    margin-top: 2%;
+}
+
+input{
+    height: 6vh;
+}
+
+form input, textarea{
+    display: block;
+    margin: 2.2vh auto;
+    padding: 2px;
+    width: 60%;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* Designing the button */
+
+.btn{
+    display: block;
+    padding: 12px 12px;
+    margin: 4px auto;
+    background: rgb(44, 16, 75);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+    
