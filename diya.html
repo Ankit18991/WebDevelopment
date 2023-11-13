@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diya</title>
+    <!-- <link rel="stylesheet" href="diya.css"> -->
+    <style>
+        body{
+            background-color: #072925;
+            background: url('https://img.freepik.com/free-vector/indian-festival-diwali-background-with-image-text-space_1017-46647.jpg') center;
+            z-index: -1;
+        }
+        
+        section{
+            display: flex;
+            flex-direction: column;
+            border: 3px solid blue;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container{
+            width: 35%;
+            height: 30vh;
+            border-radius: 0px 0px 150px 150px;
+            background-color: orange;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            animation-name: diya;
+            animation-duration: 8s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            animation-timing-function:all ease;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        }
+
+        @keyframes diya{
+            0%{
+                scale: 1.01;
+                box-shadow: 0.1rem 0.1rem 1rem 1rem rgb(255, 0, 111);
+                transition: all ease 1s;
+            }
+
+            25%{
+                border: 3px solid red;
+                box-shadow: 0.1rem 0.1rem 1rem 1rem rgb(255, 0, 111);
+                transition: all ease 1s;
+            }
+
+            50%{
+                border: 3px solid salmon;
+                filter: saturate(0.4);
+                box-shadow: 0.1rem 0.1rem 1rem 0.5rem rgb(255, 0, 111);
+                transform: rotate(360deg);
+                transition: all ease 1s;
+            }
+
+            100%{
+                border: 3px solid crimson;
+                filter: saturate(2);
+                scale: 1.05;
+                transform: translateX(3rem);
+                box-shadow: 0.1rem 0.1rem 0.4rem 0.6rem rgb(3, 41, 69);
+                transition: all ease 1s;
+            }
+        }
+
+        #sub-container div{
+            background-color: rgb(150, 64, 17);
+            height: 14vh;
+            width: 50px;
+            border-radius: 50%;
+            position: relative;
+            bottom: 17vh;
+            animation-name: flame;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            animation-timing-function: all ease;
+            animation-iteration-count: 5;
+            animation-delay: 1s;
+            animation-direction: normal;
+        }
+
+        @keyframes flame{
+            0%{
+                filter: saturate(0);
+                box-shadow: 0.1rem 0.1rem 1rem 1rem orange;
+                transition: all ease 1s;
+            }
+
+            50%{
+                filter: saturate(0.4);
+                background-color: darkred;
+                scale: 1.01;
+                box-shadow: 0.1rem 0.1rem 1rem 0.6rem rgb(255, 0, 111);
+                transition: all ease 1s;
+            }
+
+            100%{
+                filter: saturate(2);
+                scale: 1.05;
+                transform: rotate(-360deg) translateX(3rem);
+                box-shadow: 0.1rem 0.1rem 0.4rem 0.6rem rgb(255, 0, 111);
+                background-color: crimson;
+                transition: all ease 1s;
+            }
+        }
+
+        section h2{
+            animation-name: wishing;
+            animation-duration: 2.5s;
+            animation-delay: 5s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            font-size: 1.9rem;
+            color: crimson;
+            font-weight: bolder;
+            font-family: cursive;
+            background-color: yellow;
+            width: 50%;
+            text-align: center;
+            border-radius: 15px;
+        }
+        
+        @keyframes wishing{
+            0%{
+                filter: saturate(1);
+                visibility: hidden;
+                display: none;
+            }
+            
+            25%{
+                filter: opacity(1);
+                transform: translateX(4rem);
+                visibility: hidden;
+            }
+
+            50%{
+                transform: translateX(4rem);
+                visibility: hidden;
+            }
+
+            100%{
+                transform: translateX(10rem);
+                position: relative;
+                display: block;
+                top: -4vh;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="container">
+        <div id="sub-container">
+            &nbsp;
+            <div>
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <h2>
+        Happy Diwali
+    </h2>
+</section>
+</body>
+</html>
