@@ -1,0 +1,28 @@
+doctype html 
+html 
+        head 
+            title My Dance Website
+            block scripts 
+            //- In Case we want to include some js files into Our Template
+            block style 
+            //- Then we can include the css file for this particular page
+
+        body 
+            nav#navbar 
+                ul 
+                    //- li #[a(href="/") Home]
+                    div#logo 
+                        img(src="https://clipart-library.com/img1/1613890.png")
+                        | DWYA
+                    li 
+                        a(href="/") Home  
+                        //- This also Works
+                    li #[a(href="/") About]
+                    li #[a(href="/") Services]
+                    li #[a(href="/") Class Info]
+                    li #[a(href="/contact" ,target ="_blank") Contact]
+                    //- Adding Multiple Attribute in the nested Elements
+
+            block content 
+            footer#footer
+                    | Codding Maestro Copyright ©️ | Since 2023 

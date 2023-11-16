@@ -1,0 +1,60 @@
+extends base.pug 
+//- It means that this is the page in which we are extending and appending the template we created in base.pug
+
+block scripts 
+    script(src="../static/index.js") 
+
+block style 
+    style 
+        include ../static/style.css
+
+block content
+    section#introSection 
+        article
+            div Welcome To DanceWithYou Academy 
+            div.small Eat Sleep Dance Repeat 
+
+    section#missionSection 
+        h2 Our Mission
+        div.container-1
+            div.card#card-1 
+                h3 Dance Perfection
+                hr
+                div.card-box
+                    div.card-img#img1 
+                        img(src="https://www.kindpng.com/picc/m/0-3263_dance-black-and-white-png-dance-logo-black.png")
+
+                    div.card-content
+                        p This is the Best Dance Academy of the Universe 
+
+            div.card#card-2
+                h3 Dance the Way you Like
+                hr
+                div.card-box
+                    div.card-img#img2 
+                        img(src="https://www.kindpng.com/picc/m/213-2135914_break-dance-silhouette-transparent-hd-png-download.png")
+
+                    div.card-content
+                        p This is the Best Dance Academy of the Universe 
+
+            div.card#card-3 
+                h3 Expert Teaching
+                hr
+                div.card-box
+                    div.card-img#img3
+                        img(src="https://www.kindpng.com/picc/m/79-797099_break-dance-silhouette-transparent-hd-png-download.png")
+                    
+
+                    div.card-content
+                        p This is the Best Dance Academy of the Universe 
+
+    section#sponsorsSection
+        h2 Our Sponsors 
+        div.sponsers 
+            img(src="https://1000logos.net/wp-content/uploads/2016/10/Aqua-themed-apple-logo.png", alt="Error! Bad Internet Connection",class="image")
+
+            img(src="https://pngimg.com/uploads/microsoft/microsoft_PNG14.png", alt="Error! Bad Internet Connection",class="image")
+
+            img(src="https://static.cdnlogo.com/logos/h/13/hp.png", alt="Error! Bad Internet Connection",class="image")
+
+            img(src="https://cdn.razorpay.com/logos/FRxB93Bv8ng0UY_large.png", alt="Error! Bad Internet Connection",class="image")

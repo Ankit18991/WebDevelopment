@@ -1,120 +1,355 @@
-*{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bree+Serif&family=Courgette&family=Croissant+One&family=Dancing+Script:wght@400;700&family=Edu+TAS+Beginner:wght@600&family=Lora:ital,wght@1,500&family=Playball&family=Stylish&display=swap');
 
-body{
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100&family=Yeon+Sung&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bree+Serif&family=Courgette&family=Croissant+One&family=Dancing+Script:wght@400;700&family=Edu+TAS+Beginner:wght@600&family=Lora:ital,wght@1,500&family=Love+Ya+Like+A+Sister&family=Playball&family=Stylish&display=swap');
+
+body {
     background-color: black;
+    color: white;
+    width: 100%;
 }
 
-/* List Styling */
-nav{
-    background-color: rgb(29, 29, 29);
+#logo{
+    display: flex;
+    color: whitesmoke;
+    align-items: center;
+    margin: 0% 0.05%;
+    font-style: normal;
+    position: relative;
+    left: 2%;
+}
+
+#logo img{
+    height: 4vh;
+    filter: invert(1);
+}
+
+/* Designing the navbar */
+nav {
+    border: 3px solid white;
+    background-color: #b62222;
+    border-radius: 10px;
+    /* height: 7vh; */
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    font-family: 'Baloo Bhai';
+}
+
+nav ul {
+    display: flex;
+    column-gap: 8%;
+    /* justify-content: center; */
+    align-items: center;
     position: sticky;
     top: 0px;
     left: 0px;
 }
 
-ul{
-    display: flex;
-    flex-direction: row;
-    column-gap: 10%;
-    color: white;
-    width: 80%;
-    margin: auto;
-    font-weight: bold;
-}
-
-ul li {
+nav ul li {
     list-style: none;
-    padding: 1rem;
 }
 
-ul li a{
+nav ul li a {
     text-decoration: none;
     color: white;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-h2{
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0.1rem 0.1rem 1rem 0.2rem #04ac85;
+    border-radius: 10px;
+    scale: 1.1;
+    transition: all ease 0.8s;
+}
+
+nav ul li a:active {
+    background-color: white;
+    color: black;
+    box-shadow: 0.1rem 0.1rem 1rem 0.2rem #04ac85;
+    border-radius: 10px;
+    scale: 1.3;
+    filter: contrast(4);
+    transition: all ease 10ms;
+}
+
+/* Designing the Intro Section of my dance website */
+#introSection {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background: url('https://images.unsplash.com/photo-1621976498727-9e5d56476276?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') left center/cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    filter: saturate(0.1) grayscale(1);
+    border-radius: 20px;
+}
+
+#introSection .small {
+    font-size: 1.3rem;
     text-align: center;
 }
 
-/* https://www.google.com/search?q=zym+website+black+and+white&tbm=isch&ved=2ahUKEwi2zJf_o6qCAxUITmwGHUyKDUkQ2-cCegQIABAD&oq=zym+website+black+and+white&gs_lcp=ChJtb2JpbGUtZ3dzLXdpei1pbWcQAzIFCAAQogQyBQgAEKIEMgUIABCiBDIFCAAQogQyBQgAEKIEOgcIABCKBRBDOgUIABCABDoGCAAQCBAeOgkIABAYEIAEEAo6BwgAEA0QgAQ6CAgAEAgQHhANUOsJWIU7YIg9aABwAHgAgAH8AYgB9yaSAQYwLjE2LjmYAQCgAQHAAQE&sclient=mobile-gws-wiz-img&ei=ZDBGZbaKEIicseMPzJS2yAQ&bih=665&biw=360&client=ms-android-oneplus-terr1-rso2&prmd=imvn#imgrc=frfQkRuYK3efyM&imgdii=HsoC62yLXukvQM */
-
-/* Desgninng the main_container */
-
-.container{
-    margin: 1rem;
-    max-width: 70%;
-    margin: 12px auto;
+#introSection:hover{
+    filter: saturate(1);
+    transition: all ease 1.6s;
 }
 
-.container h2{
-    color: white;
-    margin-left: 15vw;
-    margin-top: 5vh;
+#introSection article{
+    position: relative;
+    animation-name: love;
+    animation-duration: 0.6s;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-direction: normal;
+    padding: 2vh 3%;
 }
 
-.container::before{
-    content: "";
-    background: url('https://c4.wallpaperflare.com/wallpaper/103/248/971/fitness-girls-hd-4k-wallpaper-preview.jpg') center center/cover;
-    /* background-image: url('/static/Gym_bakcground_2.jpg') center center/cover; */
-    position: absolute;
-    top: 3vh;
-    left: 0px;
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-    /* visibility: 1; */
+#introSection article:hover{
+    transform: translateX(-35%);
+    transform-style: preserve-3d;
+    transition: all ease 2s;
 }
 
-/* Utility Classes( Targetting OUr Form) */
-form{
-    margin-left: 15vw;
-    margin-top: 10vh;
+@keyframes love{
+    0%{
+        box-shadow: 0.1rem 0rem 0rem 0rem rgb(172, 66, 4);
+        transition: all ease 1s;
+        border-radius: 20px;
+    }
+
+    100%{
+        color: white;
+        box-shadow: 0.1rem 0.1rem 2rem 0.1rem #ac3604;
+        border-radius: 35px;
+        filter: saturate(1);
+        transition: all ease 1s;
+    }
+
+}
+
+.small{
+    animation: lover 6s ease 1.5s 1 normal forwards;
+}
+
+@keyframes lover{
+    0%{
+        border-radius: 12px;
+        transition: all ease 1s;
+        box-shadow: 0rem 0rem 0rem 0rem black;
+    }
+
+    100%{
+        color: white;
+        filter: brightness(1);
+        box-shadow: 0.1rem 0.1rem 2rem 0.1rem #ac3604;
+        border-radius: 20px;
+        filter: saturate(1);
+        transition: all ease 1s;
+    }
+}
+
+
+#introSection article div {
+    font-family: 'Yeon Sung';
+    font-size: 2.4rem;
+}
+
+/* Designing the mission section */
+#missionSection{
+    height: 50vh;
+    border: 3px solid blue;
+}
+
+.container-1{
+    display: flex;
+    justify-content: center;
+}
+
+#missionSection h2{
+    font-family: 'Yeon Sung';
+    text-align: center;
+    padding-top: 12px;
+}
+
+/* Designing Our Cards */
+.card{
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 32vh;
+    width: 20%;
+    margin: 3vh 1%;
+    padding: 0.1vh 1%;
+}
+
+.card h3{
+    text-align: center;
+    font-family: 'Yeon Sung';
+    font-weight: 0;
+}
+
+.card-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-img img{
+    width: auto;
+    height: 10vh;
+    /* height: inherit; */
+}
+
+.card-content{
+    text-align: center;
+    font-family: 'Stylish', serif;
+    font-size: 1.2rem;
+}
+
+.card hr{
+    width: 70%;
 }
 
 hr{
-    width: 50%;
+    width: 10%;
+    line-height: 0px;
+}
+
+.card img{
+    filter: invert(1);
+}
+
+/* Styling Our Sponsors Section */
+#sponsorsSection{
+    border: 4px solid whitesmoke;
     position: relative;
-    left: 35%;
-    margin-top: 2%;
 }
 
-input{
-    height: 6vh;
+#sponsorsSection::before{
+    background: url('https://img.freepik.com/premium-photo/young-man-dancing-hiphop-breakdance-isolared-black-backgrounf-neon-with-mixed-lights_489646-23088.jpg?size=626&ext=jpg&ga=GA1.1.548913112.1699546510&semt=ais') center;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 5vh;
+    left: 5%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: saturate(0.3);
 }
 
-form input, textarea{
-    display: block;
-    margin: 2.2vh auto;
-    padding: 2px;
-    width: 60%;
-    outline: none;
-    border: 2px solid black;
-    border-radius: 5px;
+#sponsorsSection:hover{
+    filter: saturate(1);
+    transition: all ease 2s;
 }
 
-/* Designing the button */
+#sponsorsSection h2{
+    text-align: center;
+    margin-bottom: 10vh;
+    font-family: 'Yeon Sung';
+}
 
-.btn{
-    display: block;
-    padding: 12px 12px;
-    margin: 4px auto;
-    background: rgb(44, 16, 75);
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    border: 2px solid black;
-    border-radius: 9px;
+#sponsorsSection .sponsers{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    column-gap: 11vh;
+}
+
+.image{
+    height: 20vh;
+    width: auto;
+    border-radius: 15px;
+}
+
+.image:hover{
+    box-shadow: 0.5rem 0.5rem 2rem 0.5rem #37115a;
+}
+
+.sponsers img:hover{
     cursor: pointer;
+    scale: 1.2;
+    filter: saturate(1);
+    transition: all ease 0.45s;
 }
 
+.sponsers img:first-child{
+    height: 15vh;
+    padding-bottom: 1vh;
+}
 
+.sponsers img:first-child:hover{
+    scale: 1.4;
+    transition: all ease 0.45s;
+}
 
+.sponsers img:nth-child(2){
+    height: 18vh;
+    filter: invert(1);
+    padding-top: 2vh;
+}
 
+.sponsers img:nth-child(3){
+    height: 21vh;
+}
 
+.sponsers img:nth-child(4){
+    height: 20vh;
+}
 
+/* Designing My Footer */
+footer{
+    text-align: center;
+    font-family: 'Baloo Bhai';
+    color: blanchedalmond;
+    background-color: rgb(33, 19, 47);
+    margin-top: 2vh;
+    font-size: 2rem;
+    border-radius: 15px;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 1894px){
+    #navbar{
+        width: 100vw;
+    }
 
     
+.sponsers img:first-child{
+    height: 6vh;
+    padding-bottom: 1vh;
+}
+
+.sponsers img:nth-child(2){
+    height: 8vh;
+    filter: invert(1);
+    padding-top: 2vh;
+}
+
+.sponsers img:nth-child(3){
+    height: 11vh;
+}
+
+.sponsers img:nth-child(4){
+    height: 10vh;
+}
+
+#sponsorsSection .sponsers{
+    column-gap: 2vw;
+}
+
+
+}

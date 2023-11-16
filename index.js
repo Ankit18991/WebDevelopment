@@ -1,13 +1,20 @@
-// getting-started.js
-const mongoose = require('mongoose');
+let lighting1 = document.getElementById('img1');
+let lighting2 = document.getElementById('img2');
+let lighting3 = document.getElementById('img3');
 
-main().catch(err => console.log(err));
+let line1 = document.getElementById('card-1');
+let line2 = document.getElementById('card-2');
+let line3 = document.getElementById('card-3');
 
-async function main() {
-    mongoose.connect('mongodb://localhost/harryKart');
-    // We are on the localhost url port, and we got into the harryKart DB created at the default port of mongoDB..
-    // mongoose.connect('mongodb://127.0.0.1:27017/test');      ---> This also Works
-  console.log("We are connected now.....");
+line1.addEventListener('mouseover', () =>{
+    lighting1.style.filter = brightness(1);
+    lighting1.style.cursor = pointer;
+});
 
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
-}
+line2.addEventListener('mouseover', () =>{
+    lighting2.style.filter = brightness(1);
+});
+
+line3.addEventListener('mouseover', () =>{
+    lighting3.style.filter = brightness(1);
+});

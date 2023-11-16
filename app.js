@@ -1,49 +1,62 @@
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 const pug = require('pug');
 const app = express();
+const mongoose = require('mongoose');
+const port = 8000;
 
-const port = 80;
+main().catch(err => console.log(err));
 
 // EXPRESS SPECIFIC STUFF
-app.use('/static', express.static('static'));  // For serving static files
-// We are gonna use a middleware to get the data of the user as soon as he or she posts request/submits the form
+app.use('/static', express.static('static')); // For serving static files
 app.use(express.urlencoded());
-// This middleware helps to bring your form's data to Express
+// In express, it is the middleware used to parse incoming request bodies with URL-encoded payloads.
 
-// PUG SPECIFIC STUFF/CONFIGURATION
-app.set('view engine', 'pug');      // Set the template engine as pug
-app.set('views',path.join(__dirname, 'views'));   // Set the View directory
+async function main(){
+  await mongoose.connect("mongodb://127.0.0.1:27017/contactDance");
+  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+}
 
-// ENDPOINTS
-app.get("/",(req, res) =>{
-    const con = "This is The best content on pug on the internet so far, so use it wisely."
-    const params = {'title': 'pubG is the best game', 'content': con};
-    res.status(200).render('index.pug',params);
-    // we will also have to send or render the variable that we are gonna use on the pug html file
+// Define Mongoose Schema
+const contactSchema = new mongoose.Schema({
+    name: String,
+    phone: String,
+    email: String,
+    address: String,
+    desc: String
+  });
+
+// Schema Being Compiled into model
+const Contact = mongoose.model('Contact', contactSchema);
+// Colection named Contact
+
+// PUG SPECIFIC STUFF
+app.set('view engine', 'pug'); // Set the template engine as pug
+app.set('views', path.join(__dirname, 'views')); // Set the views directory
+
+app.get("/", (req, res) => {
+    res.status(200).render('home.pug');
 });
 
-app.post("/",(req, res) =>{
-    let naam = req.body.name;
-    age = req.body.age;
-    gendar = req.body.gender;
-    address = req.body.address;
-    more = req.body.more;
-    // we accessing the values in the name attribute of the input tag of our form..Whatyever we wrote in the name attribut of inout tag, we are using to access it here in variables.(we did .name, .address ,.. to access it one by one)
-    // TO get the response of use in the form
-    let outputToWrite = `The name of the Client is ${naam} \n ${age} years old \n ${gendar} \n Residing at --> ${address} \n More About Him/Her: ${more} \n \n`;
-    fs.writeFileSync("./static/output.txt",outputToWrite);
-    const con = "You have Filled THe form";
-    const params = {'message': 'Your From Has been Submitted Succesfully', 'content': con};
-    res.status(200).render('index.pug',params);
+app.post("/contact", (req, res) => {
+    var myData = new Contact(req.body);
+    // Creating a New Contact document from the req that is baing done by the user
+    myData.save().then(()=>{
+        res.send("This item has been saved to database");
+    }).catch(() =>{
+        res.status(400).send("Item was not Saved to the databse");
+    })
+    // It will also return a promise aside from saving it. .then() beacuse everything in node.js is asynchronous
+    // res.status(200).render('contact.pug');  ---> we were rerendering it 
+        
 });
 
-
-// START THE SERVER
-app.listen(port, () => {
-    console.log(`The Application successfully On the post ${port}`);
-    console.log(`We also used the nodemon to contantly udate the server to constantly cope wioth the changes made in the original file`);
+app.get("/contact", (req, res) => {
+    res.status(200).render('contact.pug');
 });
 
-// In case if the pug template does notload, just delete the node-modules folder and reinstall everything :)
+ 
+app.listen(port, ()=>{
+    console.log(`The application started successfully on port ${port}`);
+});
+

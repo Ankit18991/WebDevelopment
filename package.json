@@ -1,14 +1,17 @@
 {
-  "name": "mongoosetut",
+  "name": "dancing-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This is The deancing website for the best dancing company in the world",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Utkarsh Kumar",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^8.0.0"
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0",
+    "nodemon": "^3.0.1",
+    "pug": "^3.0.2"
   }
 }
