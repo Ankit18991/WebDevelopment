@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Maipulation Techniques</title>
+</head>
+
+<body>
+    <div class="container red bg-green">
+        <div class="box" style="font-size: 2rem;" data-createdby="Utkarsh" data-concepty="Suraj Kumar">
+            <!-- Suppose we want to show who crated this attibute 
+                    This Data attribute is a custom attribute 
+            -->
+            Hey I am Box
+        </div>
+
+        <div class="box" >
+            Hey I am Box
+        </div>
+    </div>
+    <script>
+        /*  ===================================================================================================
+                                    SOME IMPORTANT PROPERTIES FOR DOM MANIPULATION
+            =================================================================================================== */
+
+
+        console.log(document.querySelector(".container").innerHTML)
+        // '\n        <div class="box">\n            Hey I am Box\n        </div>\n    '
+        console.log(document.querySelector(".container").innerHTML)
+        // '\n        <div class="box">\n            Hey I am Box\n        </div>\n    '
+        // document.querySelector(".box").innerHTML
+        // '\n            Hey I am Box\n        '
+        console.log(document.querySelector(".box").innerText)
+        // 'Hey I am Box'
+
+        /* Outer HTML Property */
+        console.log(document.querySelector(".container").outerHTML)
+
+        /*Tag Name and node name:- */
+        console.log(document.querySelector(".container").tagName)
+        console.log(document.querySelector(".container").nodeName)  // Node name is applicable for any kind of node, either it be a comment node or a text node
+
+        /* Text content: Gives text content inside, excluding tag names. But it includes the spaces and tabs */
+        console.log(document.querySelector(".container").textContent)
+
+        /* Hiding a container:- 
+         document.querySelector(".container").hidden;
+         >>>> We hide a an element using CSS usually 
+        
+         >>>> If we make it equal to true ,it hides the content of the container. It adds the hidden attribute to our container's tag
+
+        */
+
+        /* adding and chhanging the Inner HTML of an element */
+        document.querySelector(".box").innerHTML = "Hey My Name is Utkarsh";
+
+        /* hasAttribute : checks if the mentioned attribute is in the DOM element selected */
+        let is_true_False = document.querySelector(".box").hasAttribute("style");
+        console.log(is_true_False);
+        // Returns true only if the first element with class box has style attribute :)
+        // Only valid if we use this hasAttribute() method for a single element. HERE, we can;t use getelementByClaaname or querySelectorAll because these may select more than one element from the DOM or our HTML
+
+        let show_me_the_styles = document.querySelector(".box").getAttribute("style");
+        console.log(show_me_the_styles);
+
+        // Setting attributes to the selected elements :)
+        document.querySelector(".box").setAttribute("style", "color: red; font-size: 3rem"); 
+        // ONly valid for single elements :)
+
+        // Getting the attributes of an element
+        console.log(document.querySelector(".box").attributes);
+        console.log(document.querySelector(".container").attributes);
+
+        /* Removing an atribute(The 'style' attribute in this case) from an element */
+        document.querySelector(".box").removeAttribute("style");
+
+        /* If You want to edit the page, and redesign it temporarily for Your Browser use the designMode Property */
+        document.designMode =  "on";
+        document.designMode = "off";
+
+        /* To access the custom data attribute set above, we use dataset property */
+        console.log(document.querySelector(".box").dataset);
+
+        /* =================================================================================================================
+                                                            INSERTION METHODS
+           ================================================================================================================= */
+
+
+        let div = document.createElement("div");
+        div.innerHTML = "I have been inserted <strong>By Utkarsh. I am always in the end of the container becasue i ahve been appened to the container</strong>";
+        div.setAttribute("class", "created");
+        document.querySelector(".container").append(div);   // Inserted or appeneded into the HTML(The element will be visible in the end of the container the element is appended to)
+        // Suppose we have a data incoming and we want to append the data in our DOM without reloading the page, we do it using the append and insertion methods of DOM Manipulation
+        document.querySelector(".container").append(div);
+
+        // Before() method
+        document.querySelector(".container").before(div);
+
+        // After() method
+        document.querySelector(".container").after(div);
+
+        // replace() method
+        // document.querySelector(".container").replaceWith(div);
+        // It replaces the container element with the element created within the 'div' variable
+
+        /* =================================================================================================================
+                                                             INSERTING ADJACENTS
+           ================================================================================================================= */
+
+
+        //    What we have HTML, or HTML string and we want to insert it into the doucment using DOM manipulation technique
+        let cont = document.querySelector(".container");
+        cont.insertAdjacentHTML("beforebegin", "<strong> I am under the water. Please help me! Here too much raining.... iuuuuuuooo</strong>");
+
+        // To insert text:-
+        let text = document.querySelector(".box");
+        text.insertAdjacentText("beforeend", "(I am also a part of the div.box)");
+
+        // TO insert Elements :-
+        let d = document.createElement("div");
+        d.innerHTML = "I am <strong> inserted to be used to show the illustration of inserting an adjacent element</strong>";
+        d.setAttribute("id", "illustration");
+
+        let our_element = document.querySelector(".box");       // Only value for one element
+        our_element.insertAdjacentElement("beforebegin", d);
+
+
+        /* ====================================================================================================================
+                                                    REMOVAL OF NODES OR HTML ELEMENTS
+           ==================================================================================================================== */
+
+        // .remove() Method
+        let new_element = document.createElement("div");
+        new_element.innerHTML = "<strong> Inner HTML Of thw selec ted to be removed from the DOM </strong>";
+    
+        
+        let selected = document.querySelector(".box");
+        selected.insertAdjacentElement("afterend",new_element);
+
+        new_element.remove();
+
+
+        /* ======================================================================================================================
+                                                        CLASS NAME AND CLASS LISTS
+           ==================================================================================================================== */
+
+
+        //    class list
+        let class_list = document.getElementsByClassName("container")[0].classList;
+        console.log(class_list);
+        // >>>> Returns the list of classes :)
+
+        console.log(document.getElementsByClassName("container")[0].className);
+
+        // Adding class in the classlist
+        class_list.add("bg-blue");
+        console.log(class_list);
+
+        // Removing a class in the class list
+        class_list.remove("red");
+        console.log(class_list);
+
+        // Toggling the element
+        // class_list.toggle("bg-green");
+        // Toggle adds the class if it is not already present and it removes the class if it is already present
+        // Try ot use it in the browser console to see
+        // console.log(class_list);
+    </script>
+</body>
+
+</html>
