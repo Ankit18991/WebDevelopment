@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child{
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+
+        .childContainer{
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        .container{
+            background-color: yellow;
+            padding: 20px;
+            margin: 20px;
+        }
+        button{
+            position: absolute;
+            right: 10%;
+            top: 23.5%;
+            padding: 3px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I am A child
+            </div>
+            <button id="btn">Stop Lighting</button>
+        </section>
+    </div>
+
+    <!-- If we clicked on .child, the event listener will get fired for childContainer and .container too because technically, child is the child of childContainer, which is the direct child of the container. So all the event for all three will get fired at once and this is known as `event bubbling`. So if i perform an event on an element, not only that the event listener of the element will get invoked, the event listeners of it's parent and parents of parents and parens of parents will get invoked too -->
+
+    <script>
+
+      /*  ===========================================================================================================
+                                EVENT LISTENERS AND EVENT BUBBLING PREVENTION FUNCTION
+          =========================================================================================================== */
+
+
+        document.querySelector(".child").addEventListener("click", (e) => { // e = event object
+            e.stopPropagation();
+            alert("Child was clicked")
+        })
+
+        document.querySelector(".childContainer").addEventListener("click", (e) => {
+            e.stopPropagation();
+            // If i comment the above line out, the bubbling will happen for .childContainer. First this event will be invoked and then the .container event will be invoked too. 
+            alert("childContainer was clicked")
+        })
+
+        document.querySelector(".container").addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("container was clicked")
+        })
+
+
+/*      ==============================================================================================================
+                                SetInterval AND setTimeout:
+                                We can change the DOM of anyelement or perform a fucntion after 
+                                Each interval using setInterval.
+        ============================================================================================================== */
+        
+        function getRandomColor(){
+            let letter = "123456789ABCDEF"
+            let color = "#"
+            for(let i = 0; i < 6 ; i++) {
+                color += letter[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        let a_code = setInterval(() => {
+            document.querySelector(".childContainer").style.background= getRandomColor();
+        }, 500);
+        
+        console.log(a_code); // Returns 1, if we write clearInterval(1), it will stop happening.
+
+        let b = setTimeout(() => {
+            document.querySelector(".childContainer").style.color= getRandomColor();
+        }, 1000); // Changes the color after 1s . Settimeout Runs once
+
+        // On clicking the button, the generation of random colors in both the .childcontainer and the button will stop.
+        let button = document.querySelector("#btn");
+        button.style.fontWeight= "bold";
+
+        let button_interval_code = setInterval(() => {
+            button.style.background = getRandomColor();
+        }, 400);
+        console.log(button_interval_code);
+
+        button.addEventListener("click",(e)=>{
+            e.stopPropagation();
+            clearInterval(a_code);
+            clearInterval(button_interval_code);
+        })
+
+    </script>
+</body>
+
+</html>
