@@ -21,7 +21,7 @@ ________________________________________________________________________________
 
 NOTE: We import the common and normal JS modules using require() 
         But if we navigate to the package.json folder, and introduce another parameter "type": "module"
-        in the json, we cannot use require keyword to import modules of node.js now. require() keyword is synchronous, while adding "type": "modules", makes the module modules asynchronous..
+        in the json, we cannot use require keyword to import modules of node.js now. require() keyword is synchronous, while adding "type": "modules", makes the importing of modules asynchronous..
 
    -> Exporting modules so that can be imported using require() KEYWORD:myModules2.js 
         // Exporting , which will be imported via reuqire() keyword
