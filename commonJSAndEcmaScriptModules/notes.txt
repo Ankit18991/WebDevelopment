@@ -42,7 +42,7 @@ NOTE: We import the common and normal JS modules using require()
 
 ___________________________________________________________________________________________________
 
-NOTE : There are two types of export. In node.js, we can export the variables, functions and the objects from one file to another. Like we exported the variables from myModules.js to main.js. 
+NOTE : There are two types of export. In node.js, we can export the variables, functions and the objects from one file to another. Like we exported the variables from myModules.js to main.js. For these types of exports, we need to include "type": "module" in the package.json .
 There are twp types of exports: 
             1.> Default exports: 
                     let obj = {
