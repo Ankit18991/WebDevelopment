@@ -1,0 +1,70 @@
+NVM- Node Version manager. Suppose we are currenty on Node.js version v20.10.0 , but we want to work on any previous version of node.js, we can use NVM for that purpose :-
+
+            $ nvm use 16
+            Now using node v16.9.1 (npm v7.21.1)
+            $ node -v
+            v16.9.1
+
+            $ nvm use 14 --> Using version 14
+            Now using node v14.18.0 (npm v6.14.15)
+            
+            $ node -v --> Returns current Version
+            v14.18.0
+
+            $ nvm install 12
+            Now using node v12.22.6 (npm v6.14.5)
+            $ node -v
+            v12.22.6
+
+
+_________________________________________________________________________________________
+
+NOTE: We import the common and normal JS modules using require() 
+        But if we navigate to the package.json folder, and introduce another parameter "type": "module"
+        in the json, we cannot use require keyword to import modules of node.js now. require() keyword is synchronous, while adding "type": "modules", makes the module modules asynchronous..
+
+   -> Exporting modules so that can be imported using require() KEYWORD:myModules2.js 
+        // Exporting , which will be imported via reuqire() keyword
+
+
+            let c = 56;
+            module.exports = c;
+
+
+            /*module.exports = {
+                 a: 1,
+                 b: 4
+            } --> If we try to import both of them at the same time, inkly one of them , the one eported in the will be imported */ 
+
+        --> Importing it using the require() keyword
+        const a = require("./myModule2.js");
+        console.log(a, __dirname, __filename);
+
+___________________________________________________________________________________________________
+
+NOTE : There are two types of export. In node.js, we can export the variables, functions and the objects from one file to another. Like we exported the variables from myModules.js to main.js. 
+There are twp types of exports: 
+            1.> Default exports: 
+                    let obj = {
+                        x: 5,
+                        y: 7
+                    }
+
+                    export default obj;
+
+                    importing Default exports :
+                                import utkarsh from "./myModules.js"            // Importing Default Exports
+                    console.log(utkarsh)
+                    //  This worked because we are importing the defaul values from this defaul export object byn any name, it could be named as utkarsh, harry or the original name 'obj' because we are importing the default exported value from the "myModules.js" as 'utkarsh'..
+
+
+            2.> Named exports: (like we did)
+                    export const a = 1
+                    export const b = 2
+                    export const c = 3
+                    export const d = 4
+                    export const e = 5
+
+                    Importing Named Exports: 
+                    import {a, b} from "./myModules.js"             // Importing Named EXPORTS(by name in the original file)
+                    console.log(a, b)
