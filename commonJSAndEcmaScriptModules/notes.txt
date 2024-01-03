@@ -34,7 +34,7 @@ NOTE: We import the common and normal JS modules using require()
             /*module.exports = {
                  a: 1,
                  b: 4
-            } --> If we try to import both of them at the same time, inkly one of them , the one eported in the will be imported */ 
+            } --> If we try to import both of them at the same time, only one of them , the one exported in the end or later will be imported */ 
 
         --> Importing it using the require() keyword
         const a = require("./myModule2.js");
